@@ -20,20 +20,10 @@ export default function TerminalPage() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-6xl w-full mx-auto flex flex-col gap-6 z-10"
+        className="max-w-6xl w-full mx-auto flex flex-col gap-6 z-10 pt-16 md:pt-20"
       >
-        {/* Header / Back Button */}
-        <div className="flex items-center justify-between mb-2">
-          <Link
-            href="/"
-            className="group flex items-center gap-2 text-subtext0 hover:text-text transition-colors text-sm font-medium"
-          >
-            <div className="p-2 rounded-lg bg-surface0 group-hover:bg-surface1 transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-            </div>
-            <span>{t("home")}</span>
-          </Link>
-          
+        {/* Header Indicators */}
+        <div className="flex items-center justify-end mb-2">
           <div className="flex items-center gap-3">
              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-green/10 border border-green/20">
                 <div className="w-2 h-2 rounded-full bg-green animate-pulse" />

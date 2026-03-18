@@ -32,17 +32,6 @@ export default function ProjectsPage() {
 
   return (
     <main className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory bg-base custom-scrollbar">
-      {/* Back Button Overlay */}
-      <div className="fixed top-6 left-6 z-50">
-        <Link
-          href="/"
-          className="group flex items-center gap-2 text-subtext0 hover:text-text transition-colors bg-mantle/80 backdrop-blur-md px-4 py-2 rounded-xl border border-surface0"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span className="text-sm font-medium">{navT("home")}</span>
-        </Link>
-      </div>
-
       {/* Snap Sections */}
       {projects.map((proj, index) => (
         <section
@@ -85,14 +74,11 @@ export default function ProjectsPage() {
                   href={t(`${proj.key}.link`)}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-6 py-3 bg-blue text-base hover:bg-blue/90 transition-all rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-blue/20"
+                  className="px-8 py-3 bg-blue text-base hover:bg-blue/90 transition-all rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-blue/20"
                 >
                   <Github className="w-5 h-5" />
                   View Source
                 </a>
-                <button className="px-6 py-3 bg-surface0 text-text border border-surface1 hover:bg-surface1 transition-all rounded-xl font-medium flex items-center gap-2">
-                   Live Demo <ExternalLink className="w-4 h-4" />
-                </button>
               </div>
             </motion.div>
 

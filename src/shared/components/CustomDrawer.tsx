@@ -12,31 +12,38 @@ export default function CustomDrawer() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const navItems = [
+  const allNavItems = [
     { label: t("home"), index: 0, href: "/" },
     { label: t("about"), index: 1, href: "/" },
-    { label: t("portfolio"), index: 2, href: "/projects" },
     { label: t("services"), index: 3, href: "/" },
     { label: t("contact"), index: 4, href: "/" },
     { label: "Terminal", index: 5, href: "/terminal" },
+    { label: "Projects", index: 6, href: "/projects" },
   ];
 
-  const handleNavClick = (item: typeof navItems[0]) => {
+  const navItems = allNavItems.filter(item => {
+    if (pathname === "/") {
+       if (item.href === "/projects") return false;
+       return true;
+    }
+    if (pathname === "/projects") return item.href === "/" || item.href === "/projects";
+    if (pathname === "/terminal") return item.href === "/" || item.href === "/terminal";
+    return true;
+  });
+
+  const handleNavClick = (item: typeof allNavItems[0]) => {
     setDrawerOpen(false);
     
-    if (item.href !== "/") {
+    if (item.href !== pathname) {
       router.push(item.href as any);
       return;
     }
 
-    if (pathname !== "/") {
-      router.push("/");
-      return;
-    }
-
-    const sections = document.querySelectorAll("section");
-    if (sections[item.index]) {
-      sections[item.index].scrollIntoView({ behavior: "smooth" });
+    if (pathname === "/") {
+      const sections = document.querySelectorAll("section");
+      if (sections[item.index]) {
+        sections[item.index].scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -66,7 +73,7 @@ export default function CustomDrawer() {
         <div className="flex flex-col gap-6">
           {navItems.map((item) => (
             <button
-              key={item.index}
+              key={item.label}
               onClick={() => handleNavClick(item)}
               className={clsx(
                 "text-left text-lg font-medium transition-colors",
