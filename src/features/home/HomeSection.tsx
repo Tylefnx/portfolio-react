@@ -7,7 +7,7 @@ export default function HomeSection() {
   const t = useTranslations("home");
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-base">
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-transparent">
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         {/* Left Col - Hero */}
         <motion.div
@@ -76,9 +76,6 @@ export default function HomeSection() {
         </motion.div>
       </div>
 
-      {/* Decorative Blob */}
-      <div className="absolute right-[-10%] top-[-10%] w-[500px] h-[500px] bg-blue/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute left-[-10%] bottom-[-10%] w-[500px] h-[500px] bg-mauve/10 rounded-full blur-[120px] pointer-events-none" />
     </section>
   );
 }

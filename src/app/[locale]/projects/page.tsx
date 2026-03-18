@@ -36,7 +36,7 @@ export default function ProjectsPage() {
       {projects.map((proj, index) => (
         <section
           key={proj.id}
-          className="h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden border-b border-surface0 last:border-b-0"
+          className="h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-transparent border-b border-surface0 last:border-b-0"
         >
           <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center z-10">
             {/* Project Info */}

@@ -14,7 +14,7 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-base relative overflow-hidden">
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative overflow-hidden">
       <div className="max-w-5xl w-full mx-auto flex flex-col gap-12 z-10">
         
         <motion.div
@@ -39,11 +39,11 @@ export default function PortfolioSection() {
           {featuredProjects.map((proj, idx) => (
             <motion.div
               key={proj.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50, rotate: idx === 0 ? -2 : 2 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="group bg-mantle border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-xl"
+              transition={{ duration: 0.8, delay: idx * 0.1, ease: "easeOut" }}
+              className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-mauve/50 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-xl"
             >
                <div className="absolute inset-0 bg-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                
@@ -98,9 +98,6 @@ export default function PortfolioSection() {
         </motion.div>
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute right-[-10%] top-[-10%] w-[400px] h-[400px] bg-mauve/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute left-[-10%] bottom-[-10%] w-[400px] h-[400px] bg-blue/5 rounded-full blur-[100px] pointer-events-none" />
     </section>
   );
 }

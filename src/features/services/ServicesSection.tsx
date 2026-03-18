@@ -15,7 +15,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-mantle relative overflow-hidden">
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative overflow-hidden">
       <div className="max-w-6xl w-full mx-auto flex flex-col gap-16 z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -35,11 +35,11 @@ export default function ServicesSection() {
           {services.map((svc, idx) => (
             <motion.div
               key={svc.key}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="bg-base border border-surface0 hover:border-surface2 transition-colors duration-300 p-8 rounded-2xl flex flex-col gap-5 group"
+              transition={{ duration: 0.7, delay: idx * 0.1, ease: "easeOut" }}
+              className="bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-blue/50 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-5 group shadow-xl"
             >
               <div className="w-16 h-16 rounded-xl bg-surface0 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 {svc.icon}

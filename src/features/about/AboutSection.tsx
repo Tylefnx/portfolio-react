@@ -12,7 +12,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-mantle relative">
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative">
       <div className="max-w-4xl w-full mx-auto flex flex-col gap-12 z-10">
         
         {/* Header */}
@@ -40,11 +40,11 @@ export default function AboutSection() {
           {details.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50, x: index === 0 ? -20 : 20 }}
+              whileInView={{ opacity: 1, y: 0, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className="flex flex-col gap-3 p-6 rounded-2xl bg-base border border-surface0 hover:border-surface1 transition-colors group"
+              transition={{ duration: 0.8, delay: 0.2 + index * 0.1, ease: "easeOut" }}
+              className="flex flex-col gap-3 p-8 rounded-3xl bg-mantle/40 backdrop-blur-sm border border-surface0 hover:border-blue/50 transition-all duration-500 group shadow-lg"
             >
               <h3 className="text-xl text-text font-semibold flex items-center gap-2">
                 <span className="text-green group-hover:text-peach transition-colors">
