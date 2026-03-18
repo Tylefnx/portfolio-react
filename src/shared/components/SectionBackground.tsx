@@ -14,7 +14,7 @@ export default function SectionBackground({
       
       {/* 2. Brilliant, Visible Grid Pattern (Minimal Desen) */}
       <div 
-        className="absolute inset-0 opacity-[0.2] z-10"
+        className="absolute inset-0 opacity-[0.1] z-10"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L50 50L0 50' fill='none' stroke='%2345475a' stroke-width='1'/%3E%3C/svg%3E")`,
           backgroundSize: "50px 50px"
@@ -23,12 +23,12 @@ export default function SectionBackground({
       
       {/* 3. Colorful, vibrant glowing orbs (Renkli Renkli) */}
       <motion.div
-        animate={{ scale: [1, 1.25, 1], opacity: [0.6, 1, 0.6] }}
+        animate={{ scale: [1, 1.25, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         className={`absolute -top-[20%] -left-[10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] ${color1} rounded-full blur-[140px] mix-blend-screen z-20`}
       />
       <motion.div
-        animate={{ scale: [1, 1.25, 1], opacity: [0.6, 1, 0.6] }}
+        animate={{ scale: [1, 1.25, 1], opacity: [0.3, 0.6, 0.3] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         className={`absolute -bottom-[20%] -right-[10%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] ${color2} rounded-full blur-[140px] mix-blend-screen z-20`}
       />
