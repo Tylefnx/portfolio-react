@@ -7,7 +7,6 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import CustomNavbar from "@/shared/components/CustomNavbar";
 import CustomDrawer from "@/shared/components/CustomDrawer";
-import DynamicBackground from "@/shared/components/DynamicBackground";
 
 const firaCode = Fira_Code({
   variable: "--font-fira-code",
@@ -38,7 +37,6 @@ export default async function RootLayout({
     <html lang={locale} className={`${firaCode.variable} antialiased h-[100dvh]`}>
       <body className="h-[100dvh] overflow-hidden flex flex-col text-text bg-base font-sans m-0">
         <NextIntlClientProvider messages={messages}>
-          <DynamicBackground />
           <CustomNavbar />
           <CustomDrawer />
           {children}

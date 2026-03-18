@@ -2,8 +2,10 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import { Github, ExternalLink, ArrowLeft, Terminal, Layout, Shield, Database } from "lucide-react";
 import { Link } from "@/i18n/routing";
+import DynamicBackground from "@/shared/components/DynamicBackground";
 
 const projectIcons = {
   portfolio: <Layout className="w-8 h-8" />,
@@ -22,6 +24,7 @@ const projectColors = {
 export default function ProjectsPage() {
   const t = useTranslations("portfolio.projects");
   const navT = useTranslations("nav");
+  const containerRef = useRef<HTMLElement>(null);
 
   const projects = [
     { id: "portfolio", key: "portfolio" },
@@ -31,7 +34,9 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <main className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory bg-base custom-scrollbar">
+    <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory bg-base custom-scrollbar relative">
+      <DynamicBackground containerRef={containerRef} />
+      
       {/* Snap Sections */}
       {projects.map((proj, index) => (
         <section
