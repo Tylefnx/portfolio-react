@@ -6,8 +6,6 @@ import AboutSection from "@/features/about/AboutSection";
 import PortfolioSection from "@/features/portfolio/PortfolioSection";
 import ServicesSection from "@/features/services/ServicesSection";
 import ContactSection from "@/features/contact/ContactSection";
-import CustomNavbar from "@/shared/components/CustomNavbar";
-import CustomDrawer from "@/shared/components/CustomDrawer";
 import { useAppStore } from "@/store/useAppStore";
 
 export default function PortfolioPage() {
@@ -32,16 +30,12 @@ export default function PortfolioPage() {
   }, [setActiveSection]);
 
   return (
-    <>
-      <CustomNavbar />
-      <CustomDrawer />
-      <main className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory relative scroll-smooth bg-base">
-        <HomeSection />
-        <AboutSection />
-        <PortfolioSection />
-        <ServicesSection />
-        <ContactSection />
-      </main>
-    </>
+    <main className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory relative scroll-smooth bg-base">
+      <HomeSection />
+      <AboutSection />
+      <PortfolioSection />
+      <ServicesSection />
+      <ContactSection />
+    </main>
   );
 }
