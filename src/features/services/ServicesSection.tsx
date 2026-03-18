@@ -41,9 +41,9 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: idx * 0.1, ease: "easeOut" }}
-              className="bg-white/5 backdrop-blur-2xl border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-5 group shadow-2xl hover:-translate-y-2"
+              className="bg-mantle border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-5 group shadow-xl hover:-translate-y-2"
             >
-              <div className="w-16 h-16 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="w-16 h-16 rounded-xl bg-surface0 border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
                 {svc.icon}
               </div>
               <h3 className="text-xl text-text font-bold">

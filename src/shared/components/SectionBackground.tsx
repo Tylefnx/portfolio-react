@@ -12,16 +12,7 @@ export default function SectionBackground({
       {/* 1. Base Gradient slightly darker than base to add contrast */}
       <div className="absolute inset-0 bg-base z-0" />
       
-      {/* 2. Brilliant, Visible Grid Pattern (Minimal Desen) */}
-      <div 
-        className="absolute inset-0 opacity-[0.15] z-10"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0L50 50L0 50' fill='none' stroke='%23313244' stroke-width='1'/%3E%3C/svg%3E")`,
-          backgroundSize: "50px 50px"
-        }}
-      />
-      
-      {/* 3. Colorful, ambient glowing orbs (Renkli Renkli) pushed to edges */}
+      {/* 2. Abstract, ambient glowing orbs (Renkli Renkli) pushed to edges */}
       <motion.div
         animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}

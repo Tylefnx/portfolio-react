@@ -55,7 +55,7 @@ export default function ProjectsPage() {
               transition={{ duration: 0.8 }}
               className="flex flex-col gap-6"
             >
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg bg-white/10 border border-white/10 text-white transition-transform duration-500 hover:scale-110">
+              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg border-2 ${projectColors[proj.id as keyof typeof projectColors]} bg-surface0 transition-transform duration-500 hover:scale-110`}>
                 {projectIcons[proj.id as keyof typeof projectIcons]}
               </div>
               
@@ -71,7 +71,7 @@ export default function ProjectsPage() {
               <div className="flex flex-wrap gap-3 mt-4">
                  {/* Dummy tags for now, usually would come from data */}
                  {["Next.js", "TypeScript", "Tailwind"].map(tag => (
-                   <span key={tag} className="px-3 py-1 bg-white/5 backdrop-blur-md rounded-lg text-xs font-mono text-text/90 border border-white/10 shadow-sm">
+                   <span key={tag} className="px-3 py-1 bg-surface0 rounded-lg text-xs font-mono text-subtext1 border border-surface1 shadow-sm">
                       {tag}
                    </span>
                  ))}
@@ -82,7 +82,7 @@ export default function ProjectsPage() {
                   href={t(`${proj.key}.link`)}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-8 py-3.5 bg-text text-base hover:scale-105 transition-all duration-300 rounded-2xl font-bold flex items-center gap-2 shadow-[0_0_20px_rgba(205,214,244,0.1)] hover:shadow-[0_0_25px_rgba(205,214,244,0.3)]"
+                  className="px-8 py-3.5 bg-blue text-crust hover:bg-blue/90 hover:scale-105 transition-all duration-300 rounded-2xl font-bold flex items-center gap-2 shadow-lg shadow-blue/20"
                 >
                   <Github className="w-5 h-5" />
                   View Source
@@ -98,9 +98,9 @@ export default function ProjectsPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative hidden lg:block"
             >
-               <div className="aspect-video bg-white/5 backdrop-blur-2xl rounded-3xl border border-white/10 shadow-2xl flex items-center justify-center relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-white/5 group-hover:bg-white/10 transition-colors duration-500" />
-                  <span className="text-text/70 font-bold tracking-widest uppercase italic group-hover:scale-110 transition-transform duration-500">
+               <div className="aspect-video bg-mantle rounded-3xl border border-surface0 shadow-2xl flex items-center justify-center relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-blue/5 group-hover:bg-blue/10 transition-colors duration-500" />
+                  <span className="text-surface2 font-bold tracking-widest uppercase italic group-hover:scale-110 transition-transform duration-500">
                      [ {proj.id} preview ]
                   </span>
                   

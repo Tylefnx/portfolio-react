@@ -28,16 +28,16 @@ export default function ContactSection() {
             {t("subtitle")}
           </p>
           
-          <div className="flex flex-col gap-4 mt-8 bg-white/5 backdrop-blur-xl p-6 rounded-2xl border border-white/10 w-max shadow-xl">
+          <div className="flex flex-col gap-4 mt-8 bg-mantle p-6 rounded-2xl border border-surface0 w-max shadow-lg">
             <div className="flex items-center gap-4 group">
-              <div className="w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Mail className="w-5 h-5 text-text" />
+              <div className="w-10 h-10 rounded-full bg-surface0 border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Mail className="w-5 h-5 text-mauve" />
               </div>
               <span className="text-text font-medium">tayfunucuncu@gmail.com</span>
             </div>
             <div className="flex items-center gap-4 group">
-              <div className="w-10 h-10 rounded-full bg-white/10 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <MapPin className="w-5 h-5 text-text" />
+              <div className="w-10 h-10 rounded-full bg-surface0 border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <MapPin className="w-5 h-5 text-peach" />
               </div>
               <span className="text-text font-medium">Remote / Global</span>
             </div>
@@ -50,40 +50,40 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full lg:w-[450px] bg-white/5 backdrop-blur-2xl p-8 rounded-3xl border border-white/10 shadow-2xl"
+          className="w-full lg:w-[450px] bg-mantle border border-surface0 p-8 rounded-3xl shadow-2xl"
         >
           <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-text/80">
+              <label className="text-sm font-medium text-subtext1">
                 {t("form.name")}
               </label>
               <input
                 type="text"
                 placeholder={t("form.namePlaceholder")}
-                className="w-full bg-white/5 backdrop-blur-md border border-white/10 p-3 rounded-xl text-text placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                className="w-full bg-base border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-text/80">
+              <label className="text-sm font-medium text-subtext1">
                 {t("form.email")}
               </label>
               <input
                 type="email"
                 placeholder={t("form.emailPlaceholder")}
-                className="w-full bg-white/5 backdrop-blur-md border border-white/10 p-3 rounded-xl text-text placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                className="w-full bg-base border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-text/80">
+              <label className="text-sm font-medium text-subtext1">
                 {t("form.message")}
               </label>
               <textarea
                 rows={4}
                 placeholder={t("form.messagePlaceholder")}
-                className="w-full bg-white/5 backdrop-blur-md border border-white/10 p-3 rounded-xl text-text placeholder:text-white/40 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all resize-none"
+                className="w-full bg-base border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all resize-none"
               />
             </div>
-            <button className="w-full bg-text text-base py-3.5 rounded-xl font-bold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(205,214,244,0.1)] hover:shadow-[0_0_25px_rgba(205,214,244,0.3)] flex items-center justify-center gap-2 mt-2">
+            <button className="w-full bg-blue text-crust py-3.5 rounded-xl font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-blue/20 flex items-center justify-center gap-2 mt-2">
               {t("form.submit")}
               <Send className="w-5 h-5" />
             </button>
