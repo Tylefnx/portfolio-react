@@ -41,10 +41,10 @@ export default function PortfolioSection() {
           {featuredProjects.map((proj, idx) => (
             <motion.div
               key={proj.id}
-              initial={{ opacity: 0, y: 50, rotate: idx === 0 ? -2 : 2 }}
-              whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+              initial={{ opacity: 0, scale: 0, rotate: idx === 0 ? -5 : 5 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: idx * 0.1, ease: "easeOut" }}
+              transition={{ type: "spring", stiffness: 100, damping: 15, delay: idx * 0.1 }}
               className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
             >
                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-surface0/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -74,10 +74,10 @@ export default function PortfolioSection() {
 
         {/* Explore More CTA */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.3 }}
           className="flex justify-center mt-6"
         >
           <Link

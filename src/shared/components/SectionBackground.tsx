@@ -8,7 +8,13 @@ export default function SectionBackground({
   color2: string;
 }) {
   return (
-    <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      className="absolute inset-0 -z-10 pointer-events-none overflow-hidden"
+    >
       {/* 1. Base Gradient slightly darker than base to add contrast */}
       <div className="absolute inset-0 bg-base z-0" />
       
@@ -29,6 +35,6 @@ export default function SectionBackground({
         className="absolute inset-0 opacity-[0.06] mix-blend-overlay z-30"
         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} 
       />
-    </div>
+    </motion.div>
   );
 }

@@ -49,10 +49,10 @@ export default function ProjectsPage() {
           <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center z-10">
             {/* Project Info */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.8, x: -20 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
               viewport={{ margin: "-100px" }}
-              transition={{ duration: 0.8 }}
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
               className="flex flex-col gap-6"
             >
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg border-2 ${projectColors[proj.id as keyof typeof projectColors]} bg-surface0/40 backdrop-blur-md transition-transform duration-500 hover:scale-110`}>
@@ -92,10 +92,10 @@ export default function ProjectsPage() {
 
             {/* Project Visual Placeholder */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, rotate: 2 }}
+              initial={{ opacity: 0, scale: 0.5, rotate: 5 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 }}
               className="relative hidden lg:block"
             >
                <div className="aspect-video bg-mantle/40 backdrop-blur-xl rounded-3xl border border-surface0 shadow-2xl flex items-center justify-center relative overflow-hidden group">

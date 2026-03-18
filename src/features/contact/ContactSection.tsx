@@ -15,10 +15,10 @@ export default function ContactSection() {
       <div className="flex-1 max-w-5xl w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 z-10 py-12">
         {/* Left Side: Text */}
         <motion.div
-          initial={{ opacity: 0, x: -50, scale: 0.95 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.5, x: -30 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ type: "spring", stiffness: 100, damping: 20 }}
           className="flex-1 flex flex-col gap-6"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-text">
@@ -46,10 +46,10 @@ export default function ContactSection() {
 
         {/* Right Side: Form */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 }}
           className="w-full lg:w-[450px] bg-mantle/40 backdrop-blur-xl border border-surface0 p-8 rounded-3xl shadow-2xl"
         >
           <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>

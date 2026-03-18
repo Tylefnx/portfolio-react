@@ -37,10 +37,10 @@ export default function ServicesSection() {
           {services.map((svc, idx) => (
             <motion.div
               key={svc.key}
-              initial={{ opacity: 0, y: 40, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: idx * 0.1, ease: "easeOut" }}
+              transition={{ type: "spring", stiffness: 100, damping: 15, delay: idx * 0.1 }}
               className="bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-5 group shadow-xl hover:-translate-y-2"
             >
               <div className="w-16 h-16 rounded-xl bg-surface0/40 backdrop-blur-md border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
