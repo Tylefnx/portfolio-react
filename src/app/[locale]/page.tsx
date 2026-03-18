@@ -7,7 +7,6 @@ import PortfolioSection from "@/features/portfolio/PortfolioSection";
 import ServicesSection from "@/features/services/ServicesSection";
 import ContactSection from "@/features/contact/ContactSection";
 import { useAppStore } from "@/store/useAppStore";
-import DynamicBackground from "@/shared/components/DynamicBackground";
 
 export default function PortfolioPage() {
   const setActiveSection = useAppStore((state) => state.setActiveSection);
@@ -33,7 +32,6 @@ export default function PortfolioPage() {
 
   return (
     <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory relative scroll-smooth bg-base">
-      <DynamicBackground containerRef={containerRef} />
       <HomeSection />
       <AboutSection />
       <PortfolioSection />

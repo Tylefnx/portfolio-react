@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import SectionBackground from "@/shared/components/SectionBackground";
 
 export default function AboutSection() {
   const t = useTranslations("about");
@@ -12,7 +13,8 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative">
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative z-0">
+      <SectionBackground color1="bg-peach/30" color2="bg-sapphire/30" />
       <div className="max-w-4xl w-full mx-auto flex flex-col gap-12 z-10">
         
         {/* Header */}
