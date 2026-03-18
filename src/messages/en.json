@@ -1,0 +1,129 @@
+{
+  "app": {
+    "title": "tayfunucuncu.dev"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "statusPill": "Available for Freelance Work",
+    "heroTitle": "Mobile Engineering Meets\nSystem Administration.",
+    "heroDescription": "I don't just build apps; I architect secure, stable, and optimized digital ecosystems. Specialized in Flutter, Golang, and Linux Systems.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "header": {
+      "title": "Clean Code & System Integrity",
+      "description": "Full Stack Developer and System Administrator with a focus on Clean Architecture and secure API integrations."
+    },
+    "mission": {
+      "title": "Technical Approach",
+      "content": "To deliver production-ready applications by combining Flutter's UI power with robust Go backends and secured Linux environments."
+    },
+    "vision": {
+      "title": "Core Values",
+      "content": "Maintaining high-performance standards through automation, security-first networking, and clean code principles."
+    }
+  },
+  "services": {
+    "title": "What I Do",
+    "items": {
+      "mobile": {
+        "title": "Mobile Development",
+        "desc": "High-performance iOS & Android apps using Flutter and Clean Architecture."
+      },
+      "backend": {
+        "title": "Backend Engineering",
+        "desc": "Scalable server-side solutions with Golang, Python, and Gin framework."
+      },
+      "system": {
+        "title": "System Administration",
+        "desc": "Expertise in Linux Systems, Docker, Nginx, and VPS management."
+      },
+      "security": {
+        "title": "Network & Security",
+        "desc": "Secure network architectures and VPN protocol configurations."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to discuss your next high-performance project?\nReach out via the form or social media.",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "e.g. Tayfun Üçüncü",
+      "email": "Email Address",
+      "emailPlaceholder": "contact@tayfun.dev",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell me about your project and infrastructure needs...",
+      "submit": "Send Message"
+    }
+  },
+  "portfolio": {
+    "projects": {
+      "portfolio": {
+        "title": "tayfunucuncu.dev",
+        "description": "Self hosted portfolio website with clean architecture.",
+        "link": "https://github.com/Tylefnx/tayfunucuncu.dev"
+      },
+      "gymlogger": {
+        "title": "Gymlogger",
+        "description": "AI-powered fitness tracking mobile application with Go backend and an LSTM model.",
+        "link": "https://github.com/Tylefnx/gymlogger"
+      },
+      "budgetbuddy": {
+        "title": "budgetbuddy",
+        "description": "Personal finance tracking application focused on simplicity.",
+        "link": "https://github.com/Tylefnx/budgetbuddy"
+      },
+      "bsl": {
+        "title": "Based Login System",
+        "description": "Minimalist TUI based login manager for unix based systems.",
+        "link": "https://github.com/Tylefnx/bls"
+      }
+    }
+  },
+  "terminal": {
+    "welcome": [
+      "Welcome to Tayfun OS v1.0.0 (Linux System)",
+      "System initialized. Secure protocols active.",
+      "Type 'help' to see available commands.",
+      ""
+    ],
+    "help": {
+      "title": "Available commands:",
+      "whoami": "whoami    - About the developer",
+      "projects": "projects  - Show featured projects (Go/Flutter/AI)",
+      "skills": "skills    - Technical capabilities",
+      "contact": "contact   - Get email address",
+      "clear": "clear     - Clear the terminal"
+    },
+    "whoami": [
+      "Tayfun Ucuncu | Full Stack Mobile Engineer",
+      "Specialized in Flutter, Golang, and Linux Infrastructure.",
+      "Expert in Network Security and Secure API design."
+    ],
+    "projects": {
+      "fetching": "Connecting to GitHub API...",
+      "gymlogger": "1. Gymlogger (Go + Python LSTM + Flutter)",
+      "gymloggerDesc": "   - Advanced AI-powered fitness ecosystem.",
+      "portfolio": "2. Terminal Portfolio (This Website)",
+      "portfolioDesc": "   - Dockerized & Self-hosted on Linux VPS."
+    },
+    "skills": [
+      "• Languages: Dart, Go, Python, Bash",
+      "• Systems: Linux, Docker, Nginx, Cloud Infra",
+      "• Security: VPN Protocols, Proxy Configs, Network Security"
+    ],
+    "contactEmail": "Email: tayfunucuncu@gmail.com",
+    "notFound": "bash: {{command}}: command not found"
+  },
+  "footer": {
+    "copyright": "© 2026 tayfunucuncu.dev | Built with Flutter and colored with Catppuccin"
+  }
+}

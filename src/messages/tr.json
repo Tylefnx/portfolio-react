@@ -1,0 +1,129 @@
+{
+  "app": {
+    "title": "tayfunucuncu.dev"
+  },
+  "nav": {
+    "home": "Anasayfa",
+    "about": "Hakkımda",
+    "portfolio": "Portfolyo",
+    "services": "Hizmetler",
+    "contact": "İletişim"
+  },
+  "home": {
+    "statusPill": "Freelance Projeler İçin Müsait",
+    "heroTitle": "Mobil Mühendislik ve\nSistem Yönetiminin Gücü.",
+    "heroDescription": "Sadece uygulama geliştirmiyorum; güvenli, kararlı ve optimize edilmiş dijital ekosistemler mimarlıyorum. Flutter, Golang ve Linux Sistemleri üzerine uzmanlaştım.",
+    "viewProjects": "Projeleri İncele",
+    "contactMe": "İletişime Geç"
+  },
+  "about": {
+    "header": {
+      "title": "Temiz Kod ve Sistem Bütünlüğü",
+      "description": "Temiz Mimari ve güvenli API entegrasyonlarına odaklanan Full Stack Geliştirici ve Sistem Yöneticisi."
+    },
+    "mission": {
+      "title": "Teknik Yaklaşımım",
+      "content": "Flutter'ın UI gücünü, sağlam Go backend sistemleri ve güvenli Linux ortamlarıyla birleştirerek yayına hazır çözümler sunmak."
+    },
+    "vision": {
+      "title": "Temel Değerler",
+      "content": "Otomasyon, güvenlik öncelikli ağ yapılandırmaları ve temiz kod prensipleriyle yüksek performans standartlarını korumak."
+    }
+  },
+  "services": {
+    "title": "Neler Yapıyorum",
+    "items": {
+      "mobile": {
+        "title": "Mobil Geliştirme",
+        "desc": "Flutter ve Temiz Mimari kullanarak yüksek performanslı iOS ve Android uygulamaları."
+      },
+      "backend": {
+        "title": "Backend Mühendisliği",
+        "desc": "Golang, Python ve Gin çatısı ile ölçeklenebilir sunucu çözümleri."
+      },
+      "system": {
+        "title": "Sistem Yönetimi",
+        "desc": "Linux Sistemleri, Docker, Nginx ve VPS yönetimi konularında uzmanlık."
+      },
+      "security": {
+        "title": "Ağ ve Güvenlik",
+        "desc": "Güvenli ağ mimarileri ve VPN protokol yapılandırmaları."
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişime Geç",
+    "subtitle": "Yüksek performanslı bir sonraki projenizi konuşmaya hazır mısınız?\nForm üzerinden veya sosyal medyadan bana ulaşabilirsiniz.",
+    "form": {
+      "name": "Adınız Soyadınız",
+      "namePlaceholder": "Örn: Tayfun Üçüncü",
+      "email": "E-posta Adresiniz",
+      "emailPlaceholder": "iletisim@tayfun.dev",
+      "message": "Mesajınız",
+      "messagePlaceholder": "Projenizden ve altyapı ihtiyaçlarınızdan bahsedin...",
+      "submit": "Mesajı Gönder"
+    }
+  },
+  "portfolio": {
+    "projects": {
+      "portfolio": {
+        "title": "tayfunucuncu.dev",
+        "description": "Temiz mimari ile hazırlanmış, kendi sunucumda barındırılan portfolyo sitesi.",
+        "link": "https://github.com/Tylefnx/tayfunucuncu.dev"
+      },
+      "gymlogger": {
+        "title": "Gymlogger",
+        "description": "Go backend ve LSTM modeli içeren yapay zeka destekli fitness takip uygulaması.",
+        "link": "https://github.com/Tylefnx/gymlogger"
+      },
+      "budgetbuddy": {
+        "title": "budgetbuddy",
+        "description": "Sadelik odaklı kişisel finans takip uygulaması.",
+        "link": "https://github.com/Tylefnx/budgetbuddy"
+      },
+      "bsl": {
+        "title": "Based Login System",
+        "description": "Unix tabanlı sistemler için minimalist TUI tabanlı giriş yöneticisi.",
+        "link": "https://github.com/Tylefnx/bls"
+      }
+    }
+  },
+  "terminal": {
+    "welcome": [
+      "Tayfun OS v1.0.0'a Hoş Geldiniz (Linux System)",
+      "Sistem başlatıldı. Güvenli protokoller aktif.",
+      "Komutları görmek için 'help' yazın.",
+      ""
+    ],
+    "help": {
+      "title": "Kullanılabilir komutlar:",
+      "whoami": "whoami    - Geliştirici hakkında",
+      "projects": "projects  - Öne çıkan projeleri göster (Go/Flutter/AI)",
+      "skills": "skills    - Teknik yetenekler",
+      "contact": "contact   - E-posta adresini al",
+      "clear": "clear     - Terminali temizle"
+    },
+    "whoami": [
+      "Tayfun Üçüncü | Full Stack Mobil Mühendis",
+      "Flutter, Golang ve Linux Altyapısı konusunda uzmanlaşmış.",
+      "Ağ Güvenliği ve Güvenli API tasarımında uzman."
+    ],
+    "projects": {
+      "fetching": "GitHub API'sine bağlanılıyor...",
+      "gymlogger": "1. Gymlogger (Go + Python LSTM + Flutter)",
+      "gymloggerDesc": "   - Gelişmiş yapay zeka destekli fitness ekosistemi.",
+      "portfolio": "2. Terminal Portfolyo (Bu Web Sitesi)",
+      "portfolioDesc": "   - Dockerize edildi ve Linux VPS üzerinde barındırılıyor."
+    },
+    "skills": [
+      "• Diller: Dart, Go, Python, Bash",
+      "• Sistemler: Linux, Docker, Nginx, Bulut Altyapısı",
+      "• Güvenlik: VPN Protokolleri, Proxy Yapılandırmaları, Ağ Güvenliği"
+    ],
+    "contactEmail": "E-posta: tayfunucuncu@gmail.com",
+    "notFound": "bash: {{command}}: komut bulunamadı"
+  },
+  "footer": {
+    "copyright": "© 2026 tayfunucuncu.dev | Flutter ile geliştirildi, Catppuccin ile renklendirildi"
+  }
+}
