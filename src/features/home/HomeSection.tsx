@@ -18,9 +18,9 @@ export default function HomeSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col items-start z-10"
         >
-          <div className="px-4 py-2 bg-surface0/30 backdrop-blur-md rounded-full border border-white/5 mb-6 inline-flex items-center gap-3 shadow-lg">
-            <span className="w-2.5 h-2.5 rounded-full bg-green animate-pulse shadow-[0_0_10px_rgba(166,227,161,0.8)]" />
-            <span className="text-xs text-subtext1 font-bold tracking-widest uppercase">
+          <div className="px-4 py-2 bg-white/5 backdrop-blur-md rounded-full border border-white/10 mb-6 inline-flex items-center gap-3 shadow-lg">
+            <span className="w-2.5 h-2.5 rounded-full bg-green shadow-[0_0_12px_rgba(166,227,161,0.9)] animate-pulse" />
+            <span className="text-xs text-text font-bold tracking-widest uppercase">
               {t("statusPill")}
             </span>
           </div>
@@ -33,10 +33,10 @@ export default function HomeSection() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-5">
-            <button className="px-8 py-3.5 bg-blue text-crust hover:bg-white transition-all duration-300 rounded-xl font-bold shadow-[0_0_20px_rgba(137,180,250,0.4)] hover:shadow-[0_0_30px_rgba(137,180,250,0.7)] hover:-translate-y-1">
+            <button className="px-8 py-3.5 bg-text text-base hover:scale-105 transition-all duration-300 rounded-2xl font-bold shadow-[0_0_20px_rgba(205,214,244,0.1)]">
               {t("viewProjects")}
             </button>
-            <button className="px-8 py-3.5 bg-mantle/50 backdrop-blur-md text-text border border-white/5 hover:border-white/20 hover:bg-surface0/50 transition-all duration-300 rounded-xl font-bold hover:-translate-y-1">
+            <button className="px-8 py-3.5 bg-white/5 backdrop-blur-md text-text border border-white/10 hover:bg-white/10 transition-all duration-300 rounded-2xl font-bold hover:scale-105 shadow-xl">
               {t("contactMe")}
             </button>
           </div>
@@ -50,26 +50,26 @@ export default function HomeSection() {
           className="w-full z-10 relative group"
         >
           <Link href="/terminal" className="block outline-none">
-            <div className="bg-mantle/30 backdrop-blur-xl rounded-[2rem] border border-white/5 p-8 lg:p-12 relative overflow-hidden group hover:border-blue/30 transition-all duration-500 cursor-pointer shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <div className="bg-white/5 backdrop-blur-2xl rounded-[2rem] border border-white/10 p-8 lg:p-12 relative overflow-hidden group hover:border-white/20 transition-all duration-500 cursor-pointer shadow-2xl">
               {/* Top ambient glow inside the card */}
-              <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50" />
+              <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-50" />
               
               <div className="flex flex-col gap-8 relative z-10">
-                <div className="w-16 h-16 rounded-2xl bg-blue/10 border border-blue/20 flex items-center justify-center group-hover:bg-blue/20 group-hover:scale-110 transition-all duration-500 shadow-[0_0_15px_rgba(137,180,250,0.2)]">
-                  <TerminalIcon className="w-8 h-8 text-blue" />
+                <div className="w-16 h-16 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-xl">
+                  <TerminalIcon className="w-8 h-8 text-text group-hover:text-blue transition-colors duration-500" />
                 </div>
                 
                 <div className="space-y-3">
-                  <h3 className="text-3xl font-bold text-text group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue group-hover:to-lavender transition-all duration-500 flex items-center gap-3">
+                  <h3 className="text-3xl font-bold text-text group-hover:text-blue transition-colors duration-500 flex items-center gap-3">
                     Interactive Terminal
-                    <Sparkles className="w-6 h-6 text-yellow opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
+                    <Sparkles className="w-6 h-6 text-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse" />
                   </h3>
-                  <p className="text-lg text-subtext0/90 leading-relaxed font-medium">
+                  <p className="text-lg text-subtext0 leading-relaxed font-medium">
                     Explore my projects, skills, and background through a fast, interactive command-line interface.
                   </p>
                 </div>
 
-                <div className="flex items-center gap-2 text-blue font-bold text-sm tracking-widest uppercase mt-2 group-hover:translate-x-2 transition-transform duration-500">
+                <div className="flex items-center gap-2 text-text group-hover:text-blue font-bold text-sm tracking-widest uppercase mt-2 group-hover:translate-x-2 transition-all duration-500">
                   Launch Terminal <ChevronRight className="w-5 h-5" />
                 </div>
               </div>
