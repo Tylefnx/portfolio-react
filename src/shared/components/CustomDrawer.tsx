@@ -23,11 +23,11 @@ export default function CustomDrawer() {
 
   const navItems = allNavItems.filter(item => {
     if (pathname === "/") {
-       if (item.href === "/projects") return false;
-       return true;
+       return item.href === "/";
     }
-    if (pathname === "/projects") return item.href === "/" || item.href === "/projects";
-    if (pathname === "/terminal") return item.href === "/" || item.href === "/terminal";
+    if (pathname === "/projects" || pathname === "/terminal") {
+       return item.href === "/";
+    }
     return true;
   });
 

@@ -14,30 +14,22 @@ export default function CustomNavbar() {
 
   // Full list of potential nav items
   const allNavItems = [
-    { label: t("home"), index: 0, href: "/", onPage: "/" },
-    { label: t("about"), index: 1, href: "/", onPage: "/" },
-    { label: t("services"), index: 3, href: "/", onPage: "/" },
-    { label: t("contact"), index: 4, href: "/", onPage: "/" },
-    { label: "Terminal", index: 5, href: "/terminal", onPage: "/terminal" },
-    { label: "Projects", index: 6, href: "/projects", onPage: "/projects" },
+    { label: t("home"), index: 0, href: "/" },
+    { label: t("about"), index: 1, href: "/" },
+    { label: t("services"), index: 3, href: "/" },
+    { label: t("contact"), index: 4, href: "/" },
+    { label: "Projects", index: 6, href: "/projects" },
   ];
 
   // Filter items based on current page
   const navItems = allNavItems.filter(item => {
     if (pathname === "/") {
-       // On home, show all section links + Terminal & Projects (but user said no portfolio in navbar if it's below)
-       // Wait, "portfolio linki aşağıda var zaten navbar'a gerek yok" 
-       // refers to the PORTFOLIO (projects) section link on the home page.
-       if (item.href === "/projects") return false; 
-       return true;
+       // On home, show section links (except projects which is a separate page now)
+       return item.href === "/";
     }
-    // On other pages, only show Home and the current page link (or just Home + relevant others)
-    // "sadece o sayfada mevcut olan yerler olsun"
-    if (pathname === "/projects") {
-       return item.href === "/" || item.href === "/projects";
-    }
-    if (pathname === "/terminal") {
-       return item.href === "/" || item.href === "/terminal";
+    // On other pages, only show Home (to allow return)
+    if (pathname === "/projects" || pathname === "/terminal") {
+       return item.href === "/";
     }
     return true;
   });
@@ -59,7 +51,7 @@ export default function CustomNavbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 p-4 lg:p-6 transition-all duration-300 pointer-events-none">
       <div className="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
-        {/* Logo/Brand */}
+        {/* Logo/Brand - Always returns Home */}
         <Link href="/" className="text-xl font-bold tracking-tight text-text hover:opacity-80 transition-opacity">
           <span className="text-blue">~/</span>tayfunucuncu
         </Link>
