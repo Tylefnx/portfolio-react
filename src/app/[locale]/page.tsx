@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import HomeSection from "@/features/home/HomeSection";
 import AboutSection from "@/features/about/AboutSection";
 import PortfolioSection from "@/features/portfolio/PortfolioSection";

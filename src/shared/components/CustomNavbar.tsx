@@ -2,7 +2,7 @@
 
 import { useAppStore } from "@/store/useAppStore";
 import { useTranslations } from "next-intl";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import clsx from "clsx";
 
 export default function CustomNavbar() {

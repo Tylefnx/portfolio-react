@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
-import "../../globals.css";
+import "../globals.css";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
@@ -25,7 +25,7 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as never)) {
     notFound();
   }
   
