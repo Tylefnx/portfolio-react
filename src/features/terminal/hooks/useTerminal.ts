@@ -63,14 +63,7 @@ export function useTerminal() {
         addLines(t.raw("whoami") as string[]);
         break;
       case "projects":
-        const projObj = t.raw("projects") as Record<string, string>;
-        addLines([
-          projObj.fetching,
-          projObj.gymlogger,
-          projObj.gymloggerDesc,
-          projObj.portfolio,
-          projObj.portfolioDesc,
-        ]);
+        addLines(t.raw("projects") as string[]);
         break;
       case "skills":
         addLines(t.raw("skills") as string[]);

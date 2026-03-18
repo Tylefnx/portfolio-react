@@ -90,8 +90,8 @@
   },
   "terminal": {
     "welcome": [
-      "Tayfun OS v1.0.0'a Hoş Geldiniz (Linux System)",
-      "Sistem başlatıldı. Güvenli protokoller aktif.",
+      "Tayfun OS v1.0.0'a Hoş Geldiniz (Gentoo/Linux)",
+      "Sistem başlatıldı. Tüm servisler aktif ve güvenli.",
       "Komutları görmek için 'help' yazın.",
       ""
     ],
@@ -106,18 +106,23 @@
     "whoami": [
       "Tayfun Üçüncü | Full Stack Mobil Mühendis",
       "Flutter, Golang ve Linux Altyapısı konusunda uzmanlaşmış.",
-      "Ağ Güvenliği ve Güvenli API tasarımında uzman."
+      "Ağ Güvenliğinden Temiz Mimari prensiplerine kadar geniş bir yelpazede çalışıyorum.",
+      "Şu anda Gentoo/Linux tabanlı güvenli ekosistemler ve yüksek performanslı mobil çözümler mimarlıyorum."
     ],
-    "projects": {
-      "fetching": "GitHub API'sine bağlanılıyor...",
-      "gymlogger": "1. Gymlogger (Go + Python LSTM + Flutter)",
-      "gymloggerDesc": "   - Gelişmiş yapay zeka destekli fitness ekosistemi.",
-      "portfolio": "2. Terminal Portfolyo (Bu Web Sitesi)",
-      "portfolioDesc": "   - Dockerize edildi ve Linux VPS üzerinde barındırılıyor."
-    },
+    "projects": [
+      "1. Gymlogger (Go + Python LSTM + Flutter)",
+      "   - Gelişmiş yapay zeka destekli fitness ekosistemi.",
+      "2. Terminal Portfolyo (Bu Web Sitesi)",
+      "   - Dockerize edildi ve Linux VPS üzerinde barındırılıyor.",
+      "3. budgetbuddy (Flutter + Riverpod + SQLite)",
+      "   - Sadelik odaklı kişisel finans takip uygulaması.",
+      "4. Based Login System (C + Linux + TUI)",
+      "   - Unix tabanlı sistemler için minimalist TUI tabanlı giriş yöneticisi."
+    ],
     "skills": [
-      "• Diller: Dart, Go, Python, Bash",
-      "• Sistemler: Linux, Docker, Nginx, Bulut Altyapısı",
+      "• Diller: Dart, Go, Python, Bash, C",
+      "• Frameworkler: Flutter (Riverpod/Bloc), Gin, Python LSTM, React/Next.js",
+      "• Sistemler & DevOps: Linux (Gentoo/Arch/Debian), Docker, Nginx, CI/CD",
       "• Güvenlik: VPN Protokolleri, Proxy Yapılandırmaları, Ağ Güvenliği"
     ],
     "contactEmail": "E-posta: tayfunucuncu@gmail.com",
