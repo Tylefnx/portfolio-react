@@ -7,10 +7,13 @@ import PortfolioSection from "@/features/portfolio/PortfolioSection";
 import ServicesSection from "@/features/services/ServicesSection";
 import ContactSection from "@/features/contact/ContactSection";
 import { useAppStore } from "@/store/useAppStore";
+import { useScroll } from "framer-motion";
+import DynamicBackground from "@/shared/components/DynamicBackground";
 
 export default function PortfolioPage() {
   const setActiveSection = useAppStore((state) => state.setActiveSection);
   const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ container: containerRef });
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -31,12 +34,15 @@ export default function PortfolioPage() {
   }, [setActiveSection]);
 
   return (
-    <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory relative scroll-smooth bg-base">
-      <HomeSection />
-      <AboutSection />
-      <PortfolioSection />
-      <ServicesSection />
-      <ContactSection />
-    </main>
+    <>
+      <DynamicBackground scrollYProgress={scrollYProgress} />
+      <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory relative scroll-smooth bg-transparent">
+        <HomeSection />
+        <AboutSection />
+        <PortfolioSection />
+        <ServicesSection />
+        <ContactSection />
+      </main>
+    </>
   );
 }

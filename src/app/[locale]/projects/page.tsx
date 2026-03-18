@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { Github, ExternalLink, ArrowLeft, Terminal, Layout, Shield, Database } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import SectionBackground from "@/shared/components/SectionBackground";
+import DynamicBackground from "@/shared/components/DynamicBackground";
+import { useScroll } from "framer-motion";
 
 const projectIcons = {
   portfolio: <Layout className="w-8 h-8" />,
@@ -25,6 +26,7 @@ export default function ProjectsPage() {
   const t = useTranslations("portfolio.projects");
   const navT = useTranslations("nav");
   const containerRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ container: containerRef });
 
   const projects = [
     { id: "portfolio", key: "portfolio" },
@@ -34,18 +36,16 @@ export default function ProjectsPage() {
   ];
 
   return (
-    <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory bg-base custom-scrollbar relative">
-      
-      {/* Snap Sections */}
+    <>
+      <DynamicBackground scrollYProgress={scrollYProgress} />
+      <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory bg-transparent custom-scrollbar relative">
+        
+        {/* Snap Sections */}
       {projects.map((proj, index) => (
         <section
           key={proj.id}
           className="h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-transparent border-b border-surface0 last:border-b-0 z-0"
         >
-          <SectionBackground 
-            color1={index % 2 === 0 ? "bg-blue/30" : "bg-green/30"} 
-            color2={index % 2 === 0 ? "bg-mauve/30" : "bg-peach/30"} 
-          />
           <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center z-10">
             {/* Project Info */}
             <motion.div
@@ -120,6 +120,7 @@ export default function ProjectsPage() {
           </div>
         </section>
       ))}
-    </main>
+      </main>
+    </>
   );
 }

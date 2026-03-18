@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Smartphone, Server, Terminal, Shield } from "lucide-react";
-import SectionBackground from "@/shared/components/SectionBackground";
 
 export default function ServicesSection() {
   const t = useTranslations("services");
@@ -17,7 +16,6 @@ export default function ServicesSection() {
 
   return (
     <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
-      <SectionBackground color1="bg-yellow/30" color2="bg-teal/30" />
       <div className="max-w-6xl w-full mx-auto flex flex-col gap-16 z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

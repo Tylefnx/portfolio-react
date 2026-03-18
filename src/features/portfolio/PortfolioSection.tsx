@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/routing";
 import { ChevronRight, Layout, Database, Sparkles } from "lucide-react";
-import SectionBackground from "@/shared/components/SectionBackground";
 
 export default function PortfolioSection() {
   const t = useTranslations("portfolio.projects");
@@ -16,7 +15,6 @@ export default function PortfolioSection() {
 
   return (
     <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
-      <SectionBackground color1="bg-green/30" color2="bg-lavender/30" />
       <div className="max-w-5xl w-full mx-auto flex flex-col gap-12 z-10">
         
         <motion.div

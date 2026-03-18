@@ -2,14 +2,12 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/routing";
 import { Terminal as TerminalIcon, Sparkles, ChevronRight } from "lucide-react";
-import SectionBackground from "@/shared/components/SectionBackground";
 
 export default function HomeSection() {
   const t = useTranslations("home");
 
   return (
     <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
-      <SectionBackground color1="bg-blue/30" color2="bg-mauve/30" />
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         {/* Left Col - Hero */}
         <motion.div

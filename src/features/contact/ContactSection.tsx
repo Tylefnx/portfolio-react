@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Send, Mail, MapPin } from "lucide-react";
-import SectionBackground from "@/shared/components/SectionBackground";
 
 export default function ContactSection() {
   const t = useTranslations("contact");
@@ -11,7 +10,6 @@ export default function ContactSection() {
 
   return (
     <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
-      <SectionBackground color1="bg-red/30" color2="bg-pink/30" />
       <div className="flex-1 max-w-5xl w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 z-10 py-12">
         {/* Left Side: Text */}
         <motion.div
