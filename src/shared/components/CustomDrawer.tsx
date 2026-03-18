@@ -15,7 +15,7 @@ export default function CustomDrawer() {
   const navItems = [
     { label: t("home"), index: 0, href: "/" },
     { label: t("about"), index: 1, href: "/" },
-    { label: t("portfolio"), index: 2, href: "/" },
+    { label: t("portfolio"), index: 2, href: "/projects" },
     { label: t("services"), index: 3, href: "/" },
     { label: t("contact"), index: 4, href: "/" },
     { label: "Terminal", index: 5, href: "/terminal" },
@@ -24,8 +24,8 @@ export default function CustomDrawer() {
   const handleNavClick = (item: typeof navItems[0]) => {
     setDrawerOpen(false);
     
-    if (item.href === "/terminal") {
-      router.push("/terminal");
+    if (item.href !== "/") {
+      router.push(item.href as any);
       return;
     }
 
@@ -51,7 +51,7 @@ export default function CustomDrawer() {
       />
       <div
         className={clsx(
-          "fixed top-0 right-0 h-[100dvh] w-64 bg-mantle border-l border-surface0 z-[60] p-6 lg:hidden transition-transform duration-300 ease-in-out shadow-2x",
+          "fixed top-0 right-0 h-[100dvh] w-64 bg-mantle border-l border-surface0 z-[60] p-6 lg:hidden transition-transform duration-300 ease-in-out shadow-2xl",
           isDrawerOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

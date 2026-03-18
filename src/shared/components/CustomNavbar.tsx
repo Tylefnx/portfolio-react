@@ -15,23 +15,20 @@ export default function CustomNavbar() {
   const navItems = [
     { label: t("home"), index: 0, href: "/" },
     { label: t("about"), index: 1, href: "/" },
-    { label: t("portfolio"), index: 2, href: "/" },
+    { label: t("portfolio"), index: 2, href: "/projects" },
     { label: t("services"), index: 3, href: "/" },
     { label: t("contact"), index: 4, href: "/" },
     { label: "Terminal", index: 5, href: "/terminal" },
   ];
 
   const handleNavClick = (item: typeof navItems[0]) => {
-    if (item.href === "/terminal") {
-      router.push("/terminal");
+    if (item.href !== "/") {
+      router.push(item.href as any);
       return;
     }
 
     if (pathname !== "/") {
        router.push("/");
-       // We might need a small delay or use a layout effect to scroll after nav, 
-       // but for now, simple redirect works. 
-       // Better: the Home page's IntersectionObserver will pick up the scroll state if we use hash or state.
        return;
     }
 

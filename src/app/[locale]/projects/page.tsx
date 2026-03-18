@@ -1,0 +1,131 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { Github, ExternalLink, ArrowLeft, Terminal, Layout, Shield, Database } from "lucide-react";
+import { Link } from "@/i18n/routing";
+
+const projectIcons = {
+  portfolio: <Layout className="w-8 h-8" />,
+  gymlogger: <Database className="w-8 h-8" />,
+  budgetbuddy: <Terminal className="w-8 h-8" />,
+  bsl: <Shield className="w-8 h-8" />,
+};
+
+const projectColors = {
+  portfolio: "border-blue text-blue bg-blue/5",
+  gymlogger: "border-green text-green bg-green/5",
+  budgetbuddy: "border-peach text-peach bg-peach/5",
+  bsl: "border-mauve text-mauve bg-mauve/5",
+};
+
+export default function ProjectsPage() {
+  const t = useTranslations("portfolio.projects");
+  const navT = useTranslations("nav");
+
+  const projects = [
+    { id: "portfolio", key: "portfolio" },
+    { id: "gymlogger", key: "gymlogger" },
+    { id: "budgetbuddy", key: "budgetbuddy" },
+    { id: "bsl", key: "bsl" },
+  ];
+
+  return (
+    <main className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory bg-base custom-scrollbar">
+      {/* Back Button Overlay */}
+      <div className="fixed top-6 left-6 z-50">
+        <Link
+          href="/"
+          className="group flex items-center gap-2 text-subtext0 hover:text-text transition-colors bg-mantle/80 backdrop-blur-md px-4 py-2 rounded-xl border border-surface0"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{navT("home")}</span>
+        </Link>
+      </div>
+
+      {/* Snap Sections */}
+      {projects.map((proj, index) => (
+        <section
+          key={proj.id}
+          className="h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden border-b border-surface0 last:border-b-0"
+        >
+          <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center z-10">
+            {/* Project Info */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col gap-6"
+            >
+              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center border-2 ${projectColors[proj.id as keyof typeof projectColors]}`}>
+                {projectIcons[proj.id as keyof typeof projectIcons]}
+              </div>
+              
+              <div className="space-y-4">
+                 <h2 className="text-4xl lg:text-5xl font-bold text-text">
+                   {t(`${proj.key}.title`)}
+                 </h2>
+                 <p className="text-xl text-subtext0 leading-relaxed max-w-xl">
+                   {t(`${proj.key}.description`)}
+                 </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3 mt-4">
+                 {/* Dummy tags for now, usually would come from data */}
+                 {["Next.js", "TypeScript", "Tailwind"].map(tag => (
+                   <span key={tag} className="px-3 py-1 bg-surface0 rounded-lg text-xs font-mono text-subtext1 border border-surface1">
+                      {tag}
+                   </span>
+                 ))}
+              </div>
+
+              <div className="flex items-center gap-4 mt-8">
+                <a
+                  href={t(`${proj.key}.link`)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-6 py-3 bg-blue text-base hover:bg-blue/90 transition-all rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-blue/20"
+                >
+                  <Github className="w-5 h-5" />
+                  View Source
+                </a>
+                <button className="px-6 py-3 bg-surface0 text-text border border-surface1 hover:bg-surface1 transition-all rounded-xl font-medium flex items-center gap-2">
+                   Live Demo <ExternalLink className="w-4 h-4" />
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Project Visual Placeholder */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              viewport={{ margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative hidden lg:block"
+            >
+               <div className="aspect-video bg-mantle rounded-3xl border border-surface0 shadow-2xl flex items-center justify-center relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-blue/5 group-hover:bg-blue/10 transition-colors" />
+                  <span className="text-surface2 font-bold tracking-widest uppercase italic group-hover:scale-110 transition-transform">
+                     [ {proj.id} preview ]
+                  </span>
+                  
+                  {/* Decorative elements */}
+                  <div className="absolute top-4 left-4 flex gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-red/40" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-yellow/40" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-green/40" />
+                  </div>
+               </div>
+            </motion.div>
+          </div>
+
+          {/* Background Number */}
+          <div className="absolute right-12 bottom-12 text-[12rem] lg:text-[20rem] font-black text-text/5 leading-none select-none pointer-events-none">
+            0{index + 1}
+          </div>
+        </section>
+      ))}
+    </main>
+  );
+}
