@@ -6,14 +6,16 @@ import { TerminalLine } from "../types";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 
-export default function TerminalView() {
+export default function TerminalView({ fullScreen = false }: { fullScreen?: boolean }) {
   const { lines, input, setInput, handleCommand } = useTerminal();
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Auto scroll to bottom when lines change
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
   }, [lines]);
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -24,7 +26,10 @@ export default function TerminalView() {
 
   return (
     <div
-      className="w-full max-w-4xl mx-auto bg-base rounded-xl shadow-2xl border border-surface0 overflow-hidden flex flex-col font-mono text-sm sm:text-base h-[500px]"
+      className={clsx(
+        "w-full mx-auto bg-base rounded-xl shadow-2xl border border-surface0 overflow-hidden flex flex-col font-mono text-sm sm:text-base transition-all duration-500",
+        fullScreen ? "h-[80vh] lg:h-[85vh] max-w-full" : "h-[500px] max-w-4xl"
+      )}
       onClick={() => inputRef.current?.focus()}
     >
       {/* Mac/Linux styled Top Bar */}
@@ -38,7 +43,10 @@ export default function TerminalView() {
       </div>
 
       {/* Terminal Body */}
-      <div className="flex-1 overflow-y-auto p-4 sm:p-6 text-text custom-scrollbar">
+      <div 
+        ref={bodyRef}
+        className="flex-1 overflow-y-auto p-4 sm:p-6 text-text custom-scrollbar scroll-smooth"
+      >
         <AnimatePresence initial={false}>
           {lines.map((line) => (
             <TerminalLineRow key={line.id} line={line} />
@@ -60,14 +68,12 @@ export default function TerminalView() {
             spellCheck="false"
           />
         </div>
-        <div ref={bottomRef} className="h-4" />
       </div>
     </div>
   );
 }
 
 function TerminalLineRow({ line }: { line: TerminalLine }) {
-  // Simple fade and slide up animation for each line
   return (
     <motion.div
       initial={{ opacity: 0, y: 5 }}
