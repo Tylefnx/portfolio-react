@@ -45,11 +45,11 @@ export default function PortfolioSection() {
               whileInView={{ opacity: 1, y: 0, rotate: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: idx * 0.1, ease: "easeOut" }}
-              className="group bg-mantle/70 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
+              className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
             >
                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-surface0/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                
-               <div className="w-12 h-12 rounded-xl bg-surface0/70 backdrop-blur-md border border-surface1 flex items-center justify-center relative z-10 transition-transform group-hover:scale-110 shadow-md">
+               <div className="w-12 h-12 rounded-xl bg-surface0/40 backdrop-blur-md border border-surface1 flex items-center justify-center relative z-10 transition-transform group-hover:scale-110 shadow-md">
                   {proj.icon}
                </div>
 
@@ -82,7 +82,7 @@ export default function PortfolioSection() {
         >
           <Link
             href="/projects"
-            className="px-10 py-5 bg-mantle/70 backdrop-blur-md border-2 border-dashed border-surface1 hover:border-surface2 hover:bg-surface0 transition-all duration-300 rounded-3xl flex items-center gap-4 group shadow-xl"
+            className="px-10 py-5 bg-mantle/40 backdrop-blur-md border-2 border-dashed border-surface1 hover:border-surface2 hover:bg-surface0 transition-all duration-300 rounded-3xl flex items-center gap-4 group shadow-xl"
           >
              <div className="flex flex-col items-start gap-1">
                 <span className="text-xs uppercase tracking-[0.2em] font-black text-subtext1 group-hover:text-text transition-colors">
@@ -93,7 +93,7 @@ export default function PortfolioSection() {
                    <Sparkles className="w-5 h-5 text-yellow opacity-0 group-hover:opacity-100 transition-opacity" />
                 </span>
              </div>
-             <div className="w-12 h-12 rounded-full bg-surface0/70 backdrop-blur-md flex items-center justify-center group-hover:bg-text group-hover:text-base transition-all transform group-hover:translate-x-2 shadow-md">
+             <div className="w-12 h-12 rounded-full bg-surface0/40 backdrop-blur-md flex items-center justify-center group-hover:bg-text group-hover:text-base transition-all transform group-hover:translate-x-2 shadow-md">
                 <ChevronRight className="w-6 h-6" />
              </div>
           </Link>
