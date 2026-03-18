@@ -28,15 +28,15 @@ export default function ContactSection() {
             {t("subtitle")}
           </p>
           
-          <div className="flex flex-col gap-4 mt-8 bg-mantle p-6 rounded-2xl border border-surface0 w-max shadow-lg">
+          <div className="flex flex-col gap-4 mt-8 bg-mantle/90 backdrop-blur-md p-6 rounded-2xl border border-surface0 w-max shadow-lg">
             <div className="flex items-center gap-4 group">
-              <div className="w-10 h-10 rounded-full bg-surface0 border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 rounded-full bg-surface0/90 backdrop-blur-md border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Mail className="w-5 h-5 text-mauve" />
               </div>
               <span className="text-text font-medium">tayfunucuncu@gmail.com</span>
             </div>
             <div className="flex items-center gap-4 group">
-              <div className="w-10 h-10 rounded-full bg-surface0 border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-10 h-10 rounded-full bg-surface0/90 backdrop-blur-md border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <MapPin className="w-5 h-5 text-peach" />
               </div>
               <span className="text-text font-medium">Remote / Global</span>
@@ -50,7 +50,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-full lg:w-[450px] bg-mantle border border-surface0 p-8 rounded-3xl shadow-2xl"
+          className="w-full lg:w-[450px] bg-mantle/90 backdrop-blur-xl border border-surface0 p-8 rounded-3xl shadow-2xl"
         >
           <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
             <div className="flex flex-col gap-2">
@@ -60,7 +60,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 placeholder={t("form.namePlaceholder")}
-                className="w-full bg-base border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all"
+                className="w-full bg-base/90 backdrop-blur-md border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -70,7 +70,7 @@ export default function ContactSection() {
               <input
                 type="email"
                 placeholder={t("form.emailPlaceholder")}
-                className="w-full bg-base border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all"
+                className="w-full bg-base/90 backdrop-blur-md border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -80,7 +80,7 @@ export default function ContactSection() {
               <textarea
                 rows={4}
                 placeholder={t("form.messagePlaceholder")}
-                className="w-full bg-base border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all resize-none"
+                className="w-full bg-base/90 backdrop-blur-md border border-surface0 p-3 rounded-xl text-text placeholder:text-surface2 focus:outline-none focus:border-blue transition-all resize-none"
               />
             </div>
             <button className="w-full bg-blue text-crust py-3.5 rounded-xl font-bold hover:scale-105 transition-all duration-300 shadow-lg shadow-blue/20 flex items-center justify-center gap-2 mt-2">
