@@ -48,7 +48,7 @@ export default function PortfolioSection() {
             <div className="w-12 h-12 rounded-2xl bg-blue/10 border border-blue/20 flex items-center justify-center">
                <Briefcase className="w-6 h-6 text-blue" />
             </div>
-            <h2 className="text-3xl lg:text-6xl font-black tracking-tighter">
+            <h2 className="text-3xl lg:text-5xl font-black tracking-tighter">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-mauve via-pink to-maroon">
                 Featured Projects
               </span>
