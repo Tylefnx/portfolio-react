@@ -36,8 +36,17 @@ export default function TerminalPage() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-6xl w-full mx-auto flex flex-col gap-6 z-10 pt-24 md:pt-28"
+        className="max-w-6xl w-full mx-auto flex flex-col gap-8 z-10 pt-24 md:pt-32"
       >
+        <div className="flex flex-col gap-3">
+          <h1 className="text-3xl lg:text-4xl font-black text-text tracking-tight">
+            {t("terminal.pageTitle")}
+          </h1>
+          <p className="text-lg text-subtext0 max-w-2xl leading-relaxed">
+            {t("terminal.pageDescription")}
+          </p>
+        </div>
+
         {/* Header Indicators */}
         <div className="flex items-center justify-end mb-2">
           <div className="flex items-center gap-3">

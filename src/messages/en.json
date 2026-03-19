@@ -12,19 +12,19 @@
   },
   "home": {
     "statusPill": "Available for Freelance Work",
-    "heroTitle": "Fast, Stable, Done right",
-    "heroDescription": "I build mobile apps and backend systems that stay fast, stable, secure and maintainable under real usage.",
+    "heroTitle": "Fast apps.\nSystems that don’t break.",
+    "heroDescription": "Mobile, backend, and infrastructure — built for production, using automation and AI to solve real problems, not to look impressive.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
   "about": {
     "header": {
-      "title": "Clean Code & System Integrity",
-      "description": "Full Stack Developer and System Administrator with a focus on Clean Architecture and secure API integrations."
+      "title": "How I Work",
+      "description": "Mobile apps backed by reliable systems. Built to stay fast and stable under real usage."
     },
     "mission": {
-      "title": "Technical Approach",
-      "content": "To deliver production-ready applications by combining Flutter's UI power with robust Go backends and secured Linux environments."
+      "title": "Production-first mindset",
+      "content": "Mobile-first systems, supported by reliable backend and infrastructure. Built to stay fast and stable under real load."
     },
     "vision": {
       "title": "Core Values",
@@ -90,6 +90,8 @@
     }
   },
   "terminal": {
+    "pageTitle": "Prefer terminals?",
+    "pageDescription": "There’s a faster way to explore — a command-line version of my portfolio.",
     "welcome": [
       "Welcome to Tayfun OS v1.0.0 (Gentoo/Linux)",
       "System initialized. All services active and secure.",

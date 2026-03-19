@@ -12,19 +12,19 @@
   },
   "home": {
     "statusPill": "Freelance Projeler İçin Müsait",
-    "heroTitle": "Hızlı, Kararlı, Doğru",
-    "heroDescription": "Gerçek kullanım altında hızlı, kararlı, güvenli ve bakımı kolay kalan mobil uygulamalar ve backend sistemleri geliştiriyorum.",
+    "heroTitle": "Hızlı uygulamalar.\nKırılmayan sistemler.",
+    "heroDescription": "Mobil, backend ve altyapı — etkileyici görünmek için değil, gerçek problemleri otomasyon ve yapay zeka ile çözmek için, prodüksiyon odaklı geliştirildi.",
     "viewProjects": "Projeleri İncele",
     "contactMe": "İletişime Geç"
   },
   "about": {
     "header": {
-      "title": "Temiz Kod ve Sistem Bütünlüğü",
-      "description": "Temiz Mimari ve güvenli API entegrasyonlarına odaklanan Full Stack Geliştirici ve Sistem Yöneticisi."
+      "title": "Nasıl Çalışırım",
+      "description": "Güvenilir sistemlerle desteklenen mobil uygulamalar. Gerçek kullanımda hızlı ve kararlı kalacak şekilde tasarlandı."
     },
     "mission": {
-      "title": "Teknik Yaklaşımım",
-      "content": "Flutter'ın UI gücünü, sağlam Go backend sistemleri ve güvenli Linux ortamlarıyla birleştirerek yayına hazır çözümler sunmak."
+      "title": "Önce Prodüksiyon Anlayışı",
+      "content": "Güvenilir backend ve altyapı ile desteklenen, mobil öncelikli sistemler. Gerçek yük altında hızlı ve kararlı kalacak şekilde geliştirildi."
     },
     "vision": {
       "title": "Temel Değerler",
@@ -90,6 +90,8 @@
     }
   },
   "terminal": {
+    "pageTitle": "Terminalleri mi tercih edersin?",
+    "pageDescription": "Keşfetmenin daha hızlı bir yolu var — portfolyomun komut satırı versiyonu.",
     "welcome": [
       "Tayfun OS v1.0.0'a Hoş Geldiniz (Gentoo/Linux)",
       "Sistem başlatıldı. Tüm servisler aktif ve güvenli.",
