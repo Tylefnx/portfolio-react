@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "../globals.css";
 import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
+import {getMessages, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import CustomNavbar from "@/shared/components/CustomNavbar";
@@ -12,6 +12,10 @@ const firaCode = Fira_Code({
   variable: "--font-fira-code",
   subsets: ["latin"],
 });
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export const metadata: Metadata = {
   title: "tayfunucuncu.dev",
@@ -26,6 +30,8 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  
+  setRequestLocale(locale);
   
   if (!routing.locales.includes(locale as never)) {
     notFound();
