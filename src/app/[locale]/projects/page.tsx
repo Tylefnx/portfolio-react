@@ -36,9 +36,19 @@ interface ProjectGalleryProps {
 
 function ProjectGallery({ projectId, images }: ProjectGalleryProps) {
   const [index, setIndex] = useState(0);
+  const [error, setError] = useState(false);
 
-  const next = () => setIndex((prev) => (prev + 1) % images.length);
-  const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
+  const next = () => { setIndex((prev) => (prev + 1) % images.length); setError(false); };
+  const prev = () => { setIndex((prev) => (prev - 1 + images.length) % images.length); setError(false); };
+
+  const fallbackUI = (
+    <>
+      <div className="absolute inset-0 bg-blue/5 group-hover:bg-blue/10 transition-colors duration-500" />
+      <span className="text-surface2 font-bold tracking-widest uppercase italic group-hover:scale-110 transition-transform duration-500">
+        [ {projectId} preview {images.length > 0 ? index + 1 : ''} ]
+      </span>
+    </>
+  );
 
   return (
     <div className="aspect-video bg-mantle/40 backdrop-blur-xl rounded-3xl border border-surface0 shadow-2xl flex items-center justify-center relative overflow-hidden group">
@@ -51,22 +61,17 @@ function ProjectGallery({ projectId, images }: ProjectGalleryProps) {
            transition={{ duration: 0.3 }}
            className="absolute inset-0 flex items-center justify-center"
         >
-          {images.length > 0 ? (
+          {images.length > 0 && !error ? (
             <img 
               src={images[index]} 
               alt={`${projectId} preview ${index + 1}`}
               className="w-full h-full object-cover"
+              onError={() => setError(true)}
             />
-          ) : (
-            <>
-              <div className="absolute inset-0 bg-blue/5 group-hover:bg-blue/10 transition-colors duration-500" />
-              <span className="text-surface2 font-bold tracking-widest uppercase italic group-hover:scale-110 transition-transform duration-500">
-                [ {projectId} preview ]
-              </span>
-            </>
-          )}
+          ) : fallbackUI}
         </motion.div>
       </AnimatePresence>
+
 
       {images.length > 1 && (
         <>
@@ -117,11 +122,7 @@ export default function ProjectsPage() {
     { id: "bls", key: "bls", tags: ["C", "Linux", "FreeBSD"], images: ["/projects/bls/1.png"] },
     { id: "portfolio", key: "portfolio", tags: ["Next.js", "TypeScript", "Tailwind", "Self-Hosted"], images: ["/projects/portfolio/1.png"] },
   ];
- Broadway
- Broadway
- Broadway
- Broadway
- Broadway
+
 
 
 
