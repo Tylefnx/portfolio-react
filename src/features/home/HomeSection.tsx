@@ -2,9 +2,11 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/routing";
 import { Terminal as TerminalIcon, Sparkles, ChevronRight } from "lucide-react";
+import { useScrollToSection } from "@/shared/hooks/useScrollToSection";
 
 export default function HomeSection() {
   const t = useTranslations("home");
+  const { scrollToSection } = useScrollToSection();
 
   return (
     <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
@@ -36,12 +38,18 @@ export default function HomeSection() {
             {t("heroDescription")}
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-5">
-            <button className="px-8 py-3.5 bg-blue text-crust hover:bg-blue/90 transition-all duration-300 rounded-xl font-bold shadow-lg shadow-blue/20 hover:-translate-y-1">
-              {t("viewProjects")}
-            </button>
-            <button className="px-8 py-3.5 bg-surface0/40 backdrop-blur-md text-text border border-surface1 hover:bg-surface1 transition-all duration-300 rounded-xl font-bold hover:-translate-y-1">
-              {t("contactMe")}
+          <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
+            <Link
+              href="/projects"
+              className="group px-8 py-4 bg-blue text-crust hover:bg-blue/90 transition-all duration-300 rounded-2xl font-bold flex items-center gap-2 shadow-lg shadow-blue/20"
+            >
+              [ {t("viewProjects")} ]
+            </Link>
+            <button
+              onClick={() => scrollToSection(4)} // Contact is index 4
+              className="group px-8 py-4 bg-surface0/50 text-text hover:bg-surface0 transition-all duration-300 rounded-2xl font-bold border border-surface1 hover:border-blue/50"
+            >
+              [ {t("contactMe")} ]
             </button>
           </div>
         </motion.div>

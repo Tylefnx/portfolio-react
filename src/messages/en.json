@@ -131,14 +131,16 @@
       "Currently architecting secure Gentoo/Linux ecosystems and performance-driven mobile solutions."
     ],
     "projects": [
-      "1. Gymlogger (Go + Python LSTM + Flutter)",
-      "   - Advanced AI-powered fitness ecosystem.",
-      "2. Terminal Portfolio (This Website)",
-      "   - Dockerized & Self-hosted on Linux VPS.",
-      "3. budgetbuddy (Flutter + Riverpod + SQLite)",
-      "   - Personal finance tracking application focused on simplicity.",
-      "4. Based Login System (C + Linux + TUI)",
-      "   - Minimalist TUI based login manager for unix based systems."
+      "1. IndustAIQ Console (Flutter + Python RAG + ML)",
+      "   - Industrial data interpretation system.",
+      "2. Industrial Telemetry Platform (Rust + Python + Flutter)",
+      "   - Lightweight PLC data collection & rule system.",
+      "3. Media Ingestion Server (Go + Flutter + Linux)",
+      "   - High-performance backend for video content.",
+      "4. Minimal Login & Session Manager (BLS) (C + Linux)",
+      "   - Lightweight TUI based login manager.",
+      "5. tayfunucuncu.dev (Next.js + TS + Tailwind)",
+      "   - This premium self-hosted portfolio."
     ],
     "skills": [
       "• Languages: Dart, Go, Python, Bash, C",

@@ -205,16 +205,18 @@ export default function ProjectsClient() {
               )}
             </motion.div>
 
-            {/* Project Visual Gallery */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5, rotate: 5 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              viewport={{ margin: "-100px" }}
-              transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 }}
-              className="relative hidden lg:block"
-            >
-               <ProjectGallery projectId={proj.id} images={proj.images || []} />
-            </motion.div>
+            {/* Project Visual Gallery - Only show if images are provided */}
+            {proj.images && proj.images.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5, rotate: 5 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                viewport={{ margin: "-100px" }}
+                transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 }}
+                className="relative hidden lg:block"
+              >
+                 <ProjectGallery projectId={proj.id} images={proj.images} />
+              </motion.div>
+            )}
           </div>
 
           <div className="absolute right-12 bottom-12 text-[12rem] lg:text-[20rem] font-black text-text/5 leading-none select-none pointer-events-none">

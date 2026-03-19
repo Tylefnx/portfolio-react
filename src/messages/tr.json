@@ -129,14 +129,16 @@
       "Şu anda Gentoo/Linux tabanlı güvenli ekosistemler ve yüksek performanslı mobil çözümler mimarlıyorum."
     ],
     "projects": [
-      "1. Gymlogger (Go + Python LSTM + Flutter)",
-      "   - Gelişmiş yapay zeka destekli fitness ekosistemi.",
-      "2. Terminal Portfolyo (Bu Web Sitesi)",
-      "   - Dockerize edildi ve Linux VPS üzerinde barındırılıyor.",
-      "3. budgetbuddy (Flutter + Riverpod + SQLite)",
-      "   - Sadelik odaklı kişisel finans takip uygulaması.",
-      "4. Based Login System (C + Linux + TUI)",
-      "   - Unix tabanlı sistemler için minimalist TUI tabanlı giriş yöneticisi."
+      "1. IndustAIQ Konsolu (Flutter + Python RAG + ML)",
+      "   - Endüstriyel veri yorumlama sistemi.",
+      "2. Endüstriyel Telemetri Platformu (Rust + Python + Flutter)",
+      "   - Hafif PLC veri toplama ve kural sistemi.",
+      "3. Medya İşleme Sunucusu (Go + Flutter + Linux)",
+      "   - Video içeriği için yüksek performanslı backend.",
+      "4. Minimalist Giriş ve Oturum Yöneticisi (BLS) (C + Linux)",
+      "   - Hafif TUI tabanlı giriş yöneticisi.",
+      "5. tayfunucuncu.dev (Next.js + TS + Tailwind)",
+      "   - Bu premium self-hosted portfolyo."
     ],
     "skills": [
       "• Diller: Dart, Go, Python, Bash, C",
