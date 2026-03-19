@@ -3,13 +3,14 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Github, Terminal, Layout, Shield, Database, ArrowLeft, Activity } from "lucide-react";
+import { Github, Terminal, Layout, Shield, Database, ArrowLeft, Activity, Radio } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import DynamicBackground from "@/shared/components/DynamicBackground";
 import { useScroll } from "framer-motion";
 
 const projectIcons = {
   industaiq: <Activity className="w-8 h-8" />,
+  telemetry: <Radio className="w-8 h-8" />,
   portfolio: <Layout className="w-8 h-8" />,
   gymlogger: <Database className="w-8 h-8" />,
   budgetbuddy: <Terminal className="w-8 h-8" />,
@@ -18,6 +19,7 @@ const projectIcons = {
 
 const projectColors = {
   industaiq: "border-amber text-amber bg-amber/5",
+  telemetry: "border-lavender text-lavender bg-lavender/5",
   portfolio: "border-blue text-blue bg-blue/5",
   gymlogger: "border-green text-green bg-green/5",
   budgetbuddy: "border-peach text-peach bg-peach/5",
@@ -32,6 +34,7 @@ export default function ProjectsPage() {
 
   const projects = [
     { id: "industaiq", key: "industaiq" },
+    { id: "telemetry", key: "telemetry" },
     { id: "portfolio", key: "portfolio" },
     { id: "gymlogger", key: "gymlogger" },
     { id: "budgetbuddy", key: "budgetbuddy" },
@@ -39,6 +42,7 @@ export default function ProjectsPage() {
   ];
  Broadway
  Broadway
+
 
   return (
     <>

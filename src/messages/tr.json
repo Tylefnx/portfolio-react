@@ -81,8 +81,13 @@
     "projects": {
       "industaiq": {
         "title": "IndustAIQ Konsolu",
-        "description": "Endüstriyel verileri gerçek zamanlı yorumlayan sistem. Makine hata kodlarını ve ham sinyalleri insan tarafından okunabilir içgörülere dönüştürerek duruş sürelerini azaltır ve karar verme sürecini iyileştirir.",
-        "link": "https://github.com/TayfunUcuncu/industaiq-console"
+        "description": "Indust.One ekosistemi bünyesinde, gerçek zamanlı endüstriyel veri yorumlama için geliştirildi. Makine hatalarını ve sinyallerini net içgörülere dönüştürerek daha hızlı yanıt verilmesini sağlar.",
+        "link": "https://github.com/Tylefnx/industaiq-console"
+      },
+      "telemetry": {
+        "title": "Endüstriyel Telemetri Platformu (Gizli)",
+        "description": "Düşük kaynaklı cihazlarda bile çalışacak şekilde tasarlanmış hafif endüstriyel telemetri platformu. Özel bir ağ geçidi üzerinden PLC verilerini toplar ve gerçek zamanlı iletir.",
+        "link": "#"
       },
       "portfolio": {
         "title": "tayfunucuncu.dev",

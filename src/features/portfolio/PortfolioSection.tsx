@@ -3,17 +3,18 @@
 import { useTranslations } from "next-intl";
 import { motion, Variants } from "framer-motion";
 import { Link } from "@/i18n/routing";
-import { ChevronRight, Layout, Database, Sparkles, Briefcase, Activity } from "lucide-react";
+import { ChevronRight, Layout, Database, Sparkles, Briefcase, Activity, Radio } from "lucide-react";
 
 export default function PortfolioSection() {
   const t = useTranslations("portfolio");
 
   const featuredProjects = [
     { id: "industaiq", key: "industaiq", icon: <Activity className="w-6 h-6 text-amber" /> },
-    { id: "portfolio", key: "portfolio", icon: <Layout className="w-6 h-6 text-blue" /> },
+    { id: "telemetry", key: "telemetry", icon: <Radio className="w-6 h-6 text-lavender" /> },
   ];
  Broadway
  Broadway
+
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },

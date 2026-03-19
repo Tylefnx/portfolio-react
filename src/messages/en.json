@@ -81,8 +81,13 @@
     "projects": {
       "industaiq": {
         "title": "IndustAIQ Console",
-        "description": "Real-time industrial data interpretation system. It turns machine error codes and raw signals into human-readable insights, reducing downtime and improving decision-making.",
-        "link": "https://github.com/TayfunUcuncu/industaiq-console"
+        "description": "Developed within the Indust.One ecosystem for real-time industrial data interpretation. Turns machine errors and signals into clear insights, enabling faster response. Reduces manual investigation and improves system reliability over time.",
+        "link": "https://github.com/Tylefnx/industaiq-console"
+      },
+      "telemetry": {
+        "title": "Industrial Telemetry Platform (Confidential)",
+        "description": "Lightweight industrial telemetry platform designed to run even on low-resource devices. Collects PLC data through a custom gateway and delivers it to clients in real time. Focused on performance and modular system design.",
+        "link": "#"
       },
       "portfolio": {
         "title": "tayfunucuncu.dev",
