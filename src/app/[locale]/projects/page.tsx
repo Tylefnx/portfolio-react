@@ -111,12 +111,17 @@ export default function ProjectsPage() {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const projects = [
-    { id: "industaiq", key: "industaiq", tags: ["Python", "RAG", "ML", "Self-Hosted"], images: [] },
-    { id: "telemetry", key: "telemetry", tags: ["Rust", "Python", "Flutter", "Docker"], images: [] },
-    { id: "media_server", key: "media_server", tags: ["Go", "Flutter", "Linux", "Self-Hosted"], images: [] },
-    { id: "bls", key: "bls", tags: ["C", "Linux", "FreeBSD"], images: [] },
-    { id: "portfolio", key: "portfolio", tags: ["Next.js", "TypeScript", "Tailwind", "Self-Hosted"], images: [] },
+    { id: "industaiq", key: "industaiq", tags: ["Python", "RAG", "ML", "Self-Hosted"], images: ["/projects/industaiq/1.png", "/projects/industaiq/2.png"] },
+    { id: "telemetry", key: "telemetry", tags: ["Rust", "Python", "Flutter", "Docker"], images: ["/projects/telemetry/1.png"] },
+    { id: "media_server", key: "media_server", tags: ["Go", "Flutter", "Linux", "Self-Hosted"], images: ["/projects/media_server/1.png"] },
+    { id: "bls", key: "bls", tags: ["C", "Linux", "FreeBSD"], images: ["/projects/bls/1.png"] },
+    { id: "portfolio", key: "portfolio", tags: ["Next.js", "TypeScript", "Tailwind", "Self-Hosted"], images: ["/projects/portfolio/1.png"] },
   ];
+ Broadway
+ Broadway
+ Broadway
+ Broadway
+ Broadway
 
 
 
