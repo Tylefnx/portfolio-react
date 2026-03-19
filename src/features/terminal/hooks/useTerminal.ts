@@ -36,48 +36,43 @@ export function useTerminal() {
   }, []);
 
   const handleCommand = (command: string) => {
-    if (!command.trim()) return;
+    const trimmedCommand = command.trim();
+    if (!trimmedCommand) return;
 
     setLines((prev) => [
       ...prev,
-      { id: crypto.randomUUID(), text: `guest@tayfun-vps:~$ ${command}`, type: "command" },
+      { id: crypto.randomUUID(), text: `guest@tayfun-vps:~$ ${trimmedCommand}`, type: "command" },
     ]);
 
-    const cleanCommand = command.trim().toLowerCase();
+    const cleanCommand = trimmedCommand.toLowerCase();
 
-    switch (cleanCommand) {
-      case "help":
+    const commandMap: Record<string, () => void> = {
+      help: () => {
         const helpObj = t.raw("help") as Record<string, string>;
-        // Output titles and commands
-        const helpLines = [
+        addLines([
           helpObj.title,
           helpObj.whoami,
           helpObj.projects,
           helpObj.skills,
           helpObj.contact,
           helpObj.clear,
-        ];
-        addLines(helpLines);
-        break;
-      case "whoami":
-        addLines(t.raw("whoami") as string[]);
-        break;
-      case "projects":
-        addLines(t.raw("projects") as string[]);
-        break;
-      case "skills":
-        addLines(t.raw("skills") as string[]);
-        break;
-      case "contact":
-        addLines([t("contactEmail")]);
-        break;
-      case "clear":
+        ]);
+      },
+      whoami: () => addLines(t.raw("whoami") as string[]),
+      projects: () => addLines(t.raw("projects") as string[]),
+      skills: () => addLines(t.raw("skills") as string[]),
+      contact: () => addLines([t("contactEmail")]),
+      clear: () => {
         setLines([]);
         addLines(t.raw("welcome") as string[]);
-        break;
-      default:
-        addLines([t("notFound", { command: cleanCommand })], "error");
-        break;
+      },
+    };
+
+    const execCommand = commandMap[cleanCommand];
+    if (execCommand) {
+      execCommand();
+    } else {
+      addLines([t("notFound", { command: cleanCommand })], "error");
     }
     
     setInput("");

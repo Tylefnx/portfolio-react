@@ -3,8 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Github, ExternalLink, ArrowLeft, Terminal, Layout, Shield, Database } from "lucide-react";
-import { Link } from "@/i18n/routing";
+import { Github, Terminal, Layout, Shield, Database } from "lucide-react";
 import DynamicBackground from "@/shared/components/DynamicBackground";
 import { useScroll } from "framer-motion";
 
@@ -24,7 +23,6 @@ const projectColors = {
 
 export default function ProjectsPage() {
   const t = useTranslations("portfolio.projects");
-  const navT = useTranslations("nav");
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ container: containerRef });
 

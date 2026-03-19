@@ -2,12 +2,8 @@
 
 import TerminalView from "@/features/terminal/components/TerminalView";
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
 
 export default function TerminalPage() {
-  const t = useTranslations("nav");
 
   return (
     <div className="min-h-[100dvh] bg-crust flex flex-col p-4 md:p-8 lg:p-12 relative overflow-hidden">
