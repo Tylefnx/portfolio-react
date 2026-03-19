@@ -18,10 +18,10 @@ export default function PortfolioSection() {
       <div className="max-w-5xl w-full mx-auto flex flex-col gap-12 z-10">
         
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true, margin: "-100px" }}
-           transition={{ duration: 0.6 }}
+           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+           viewport={{ once: false, margin: "-100px" }}
+           transition={{ duration: 0.5 }}
            className="flex flex-col gap-4 text-center lg:text-left"
         >
           <div className="flex items-center gap-3 justify-center lg:justify-start">
@@ -39,10 +39,10 @@ export default function PortfolioSection() {
           {featuredProjects.map((proj, idx) => (
             <motion.div
               key={proj.id}
-              initial={{ opacity: 0, scale: 0, rotate: idx === 0 ? -5 : 5 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ type: "spring", stiffness: 100, damping: 15, delay: idx * 0.1 }}
+              initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: false, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
             >
                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-surface0/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

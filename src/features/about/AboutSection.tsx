@@ -17,10 +17,10 @@ export default function AboutSection() {
         
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 30 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
+          initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: false, margin: "-100px" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex flex-col gap-4"
         >
           <div className="flex items-center gap-4 mb-2">
@@ -40,10 +40,10 @@ export default function AboutSection() {
           {details.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 + index * 0.1 }}
+              initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: false, margin: "-100px" }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
               className="flex flex-col gap-4 p-8 rounded-3xl bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 group shadow-xl hover:-translate-y-2 relative overflow-hidden"
             >
               {/* Subtle top ambient glow inside the card */}
