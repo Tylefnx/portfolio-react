@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Github, Terminal, Layout, Shield, Database, ArrowLeft, Activity, Radio, Video } from "lucide-react";
+import { Github, Terminal, Layout, Shield, Database, ArrowLeft, Activity, Radio, Video, Sparkles } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import DynamicBackground from "@/shared/components/DynamicBackground";
 import { useScroll } from "framer-motion";
@@ -116,8 +116,20 @@ export default function ProjectsPage() {
                   View Source
                 </a>
               </div>
-            </motion.div>
 
+              {proj.id === 'portfolio' && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  className="mt-8 p-4 bg-blue/10 border border-blue/20 rounded-xl backdrop-blur-sm max-w-fit"
+                >
+                  <p className="text-sm font-medium text-blue flex items-center gap-2">
+                    <Sparkles className="w-4 h-4" />
+                    {t('portfolio.blog_teaser')}
+                  </p>
+                </motion.div>
+              )}
+            </motion.div>
             {/* Project Visual Placeholder */}
             <motion.div
               initial={{ opacity: 0, scale: 0.5, rotate: 5 }}

@@ -101,23 +101,9 @@
       },
       "portfolio": {
         "title": "tayfunucuncu.dev",
-        "description": "Temiz mimari ile hazırlanmış, özel homelab ortamında barındırılan portfolyo sitesi. Sorgulanabilir homelab kararlarını içeren bir blog çok yakında.",
+        "description": "Temiz mimari ile hazırlanmış, özel homelab ortamında barındırılan portfolyo sitesi.",
+        "blog_teaser": "Sorgulanabilir homelab kararlarını içeren bir blog çok yakında.",
         "link": "https://github.com/Tylefnx/tayfunucuncu.dev"
-      }
-      "gymlogger": {
-        "title": "Gymlogger",
-        "description": "Go backend ve LSTM modeli içeren yapay zeka destekli fitness takip uygulaması.",
-        "link": "https://github.com/Tylefnx/gymlogger"
-      },
-      "budgetbuddy": {
-        "title": "budgetbuddy",
-        "description": "Sadelik odaklı kişisel finans takip uygulaması.",
-        "link": "https://github.com/Tylefnx/budgetbuddy"
-      },
-      "bsl": {
-        "title": "Based Login System",
-        "description": "Unix tabanlı sistemler için minimalist TUI tabanlı giriş yöneticisi.",
-        "link": "https://github.com/Tylefnx/bls"
       }
     }
   },
