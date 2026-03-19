@@ -112,46 +112,59 @@
     "pageDescription": "There’s a faster way to explore — a CLI version of my portfolio.",
     "welcome": [
       "Welcome to Tayfun OS v1.0.0 (Gentoo/Linux)",
-      "System initialized. All services active and secure.",
-      "Type 'help' to see available commands.",
-      ""
+      "System initialized. All services active and stable.",
+      "Type 'help' to see available commands."
     ],
     "help": {
       "title": "Available commands:",
-      "whoami": "whoami    - About the developer",
-      "projects": "projects  - Show featured projects (Go/Flutter/AI)",
-      "skills": "skills    - Technical capabilities",
-      "contact": "contact   - Get email address",
-      "clear": "clear     - Clear the terminal"
+      "whoami": "whoami     — About the developer",
+      "projects": "projects   — Selected work",
+      "skills": "skills     — Technical capabilities",
+      "contact": "contact    — Reach out",
+      "clear": "clear      — Clear the terminal"
     },
     "whoami": [
-      "Tayfun Ucuncu | Full Stack Mobile Engineer",
-      "Specialized in Flutter, Golang, and Linux Infrastructure.",
-      "Expertise ranging from Network Security to Clean Architecture principles.",
-      "Currently architecting secure Gentoo/Linux ecosystems and performance-driven mobile solutions."
+      "Tayfun Üçüncü",
+      "Full-stack engineer focused on building fast, reliable systems.",
+      "",
+      "I work across mobile, backend, and infrastructure,",
+      "with a strong bias for performance and simplicity.",
+      "",
+      "Currently building production-grade Linux systems",
+      "and experimenting with RAG-based automation."
     ],
     "projects": [
-      "1. IndustAIQ Console (Flutter + Python RAG + ML)",
-      "   - Industrial data interpretation system.",
-      "2. Industrial Telemetry Platform (Rust + Python + Flutter)",
-      "   - Lightweight PLC data collection & rule system.",
-      "3. Media Ingestion Server (Go + Flutter + Linux)",
-      "   - High-performance backend for video content.",
-      "4. Minimal Login & Session Manager (BLS) (C + Linux)",
-      "   - Lightweight TUI based login manager.",
-      "5. tayfunucuncu.dev (Next.js + TS + Tailwind)",
-      "   - This premium self-hosted portfolio."
+      "1. IndustAIQ Console",
+      "   Real-time industrial data interpretation with RAG-based insights.",
+      "",
+      "2. Industrial Telemetry Platform",
+      "   Lightweight PLC data collection and rule engine.",
+      "",
+      "3. Media Ingestion Server",
+      "   High-performance backend for video processing.",
+      "",
+      "4. Minimal Login Manager (BLS)",
+      "   Lightweight terminal-based login system.",
+      "",
+      "5. tayfunucuncu.dev",
+      "   Self-hosted portfolio running on a homelab."
     ],
     "skills": [
       "• Languages: Dart, Go, Python, Bash, C",
-      "• Frameworks: Flutter (Riverpod/Bloc), Gin, Python LSTM, React/Next.js",
-      "• Systems & DevOps: Linux (Gentoo/Arch/Debian), Docker, Nginx, CI/CD",
-      "• Security: VPN Protocols, Proxy Configs, Network Security"
+      "• Systems: Linux, Docker, Nginx, CI/CD",
+      "• Backend: APIs, concurrency, data processing (RAG)",
+      "• Mobile: Flutter (production experience)",
+      "• Security: Networking, proxies, system hardening"
     ],
-    "contactEmail": "Email: tayfunucuncu@gmail.com",
+    "contact": [
+      "Email: tayfunucuncu@gmail.com",
+      "Location: Remote / Global",
+      "",
+      "Prefer async communication."
+    ],
     "notFound": "bash: {{command}}: command not found"
   },
   "footer": {
-    "copyright": "© 2026 tayfunucuncu.dev | Built with Flutter and colored with Catppuccin"
+    "copyright": "© 2026 tayfunucuncu.dev | Colored with Catppuccin"
   }
 }

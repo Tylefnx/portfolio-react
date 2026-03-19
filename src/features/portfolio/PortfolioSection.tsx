@@ -10,9 +10,7 @@ export default function PortfolioSection() {
 
   const featuredProjects = [
     { id: "industaiq", key: "industaiq", icon: <Activity className="w-6 h-6 text-amber" /> },
-    { id: "telemetry", key: "telemetry", icon: <Radio className="w-6 h-6 text-lavender" /> },
     { id: "media_server", key: "media_server", icon: <Video className="w-6 h-6 text-green" /> },
-    { id: "bls", key: "bls", icon: <Shield className="w-6 h-6 text-mauve" /> },
   ];
 
 
@@ -41,7 +39,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center pt-32 pb-20 lg:pt-40 lg:pb-32 p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
       <motion.div
         variants={containerVariants}
         initial="hidden"

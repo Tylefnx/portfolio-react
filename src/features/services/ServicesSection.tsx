@@ -36,7 +36,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center pt-32 pb-20 lg:pt-40 lg:pb-32 bg-transparent relative overflow-hidden z-0">
       <motion.div
         variants={containerVariants}
         initial="hidden"

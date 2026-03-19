@@ -61,7 +61,7 @@ export function useTerminal() {
       whoami: () => addLines(t.raw("whoami") as string[]),
       projects: () => addLines(t.raw("projects") as string[]),
       skills: () => addLines(t.raw("skills") as string[]),
-      contact: () => addLines([t("contactEmail")]),
+      contact: () => addLines(t.raw("contact") as string[]),
       clear: () => {
         setLines([]);
         addLines(t.raw("welcome") as string[]);

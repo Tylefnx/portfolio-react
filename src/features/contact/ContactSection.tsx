@@ -30,7 +30,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col pt-32 pb-20 lg:pt-40 lg:pb-32 p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
       <motion.div 
         variants={containerVariants}
         initial="hidden"

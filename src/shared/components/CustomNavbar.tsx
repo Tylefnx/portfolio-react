@@ -41,8 +41,8 @@ export default function CustomNavbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 p-4 lg:p-6 transition-all duration-300 pointer-events-none">
-      <div className="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-base/5 lg:bg-transparent backdrop-blur-xl lg:backdrop-blur-none border-b border-surface0/10 lg:border-none transition-all duration-300">
+      <div className="w-full flex items-center justify-between px-6 lg:px-12 py-6 lg:py-8">
         {/* Logo/Brand - Always returns Home */}
         <Link href="/" className="text-xl font-bold tracking-tight text-text hover:opacity-80 transition-opacity">
           <span className="text-blue">~/</span>tayfunucuncu

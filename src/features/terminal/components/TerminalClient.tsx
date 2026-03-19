@@ -18,9 +18,9 @@ export default function TerminalClient() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        className="absolute top-8 left-8 z-50"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="fixed bottom-8 left-1/2 -translate-x-1/2 lg:top-28 lg:left-[46px] lg:bottom-auto lg:translate-x-0 z-50 transition-all"
       >
         <Link 
           href="/" 

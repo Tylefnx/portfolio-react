@@ -1,6 +1,5 @@
-import {redirect} from "next/navigation";
-import {routing} from "@/i18n/routing";
+import HomeClient from '@/features/home/components/HomeClient';
 
-export default function RootPage() {
-  redirect(`/${routing.defaultLocale}`);
+export default async function PortfolioPage() {
+  return <HomeClient />;
 }
