@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion, Variants } from "framer-motion";
 import { Link } from "@/i18n/routing";
-import { ChevronRight, Layout, Database, Sparkles, Briefcase, Activity, Radio, Video } from "lucide-react";
+import { ChevronRight, Layout, Database, Sparkles, Briefcase, Activity, Radio, Video, Shield } from "lucide-react";
 
 export default function PortfolioSection() {
   const t = useTranslations("portfolio");
@@ -12,9 +12,11 @@ export default function PortfolioSection() {
     { id: "industaiq", key: "industaiq", icon: <Activity className="w-6 h-6 text-amber" /> },
     { id: "telemetry", key: "telemetry", icon: <Radio className="w-6 h-6 text-lavender" /> },
     { id: "media_server", key: "media_server", icon: <Video className="w-6 h-6 text-green" /> },
+    { id: "bls", key: "bls", icon: <Shield className="w-6 h-6 text-mauve" /> },
   ];
  Broadway
  Broadway
+
 
 
 
@@ -61,8 +63,9 @@ export default function PortfolioSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
  Broadway
+
           {featuredProjects.map((proj) => (
             <motion.div
               key={proj.id}

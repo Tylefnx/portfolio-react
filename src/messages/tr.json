@@ -94,6 +94,11 @@
         "description": "Video içeriğini işlemek ve sunmak için yüksek performanslı arka uç. Akış çözünürlüğünü ve medya birleştirmeyi harici araçlara güvenmeden dahili olarak yönetir.",
         "link": "#"
       },
+      "bls": {
+        "title": "Minimalist Giriş ve Oturum Yöneticisi (BLS)",
+        "description": "Unix benzeri sistemler için hafif bir giriş ve oturum başlatıcı. Geleneksel ekran yöneticilerine olan bağımlılığı azaltmak ve kimlik doğrulama ile oturum başlatma üzerinde doğrudan kontrol sağlamak için tasarlanmıştır.",
+        "link": "#"
+      },
       "portfolio": {
         "title": "tayfunucuncu.dev",
         "description": "Temiz mimari ile hazırlanmış, kendi sunucumda barındırılan portfolyo sitesi.",

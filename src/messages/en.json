@@ -94,6 +94,11 @@
         "description": "High-performance backend for processing and delivering video content. Handles stream resolution and media assembly internally via a controlled worker system for stable performance under load.",
         "link": "#"
       },
+      "bls": {
+        "title": "Minimal Login & Session Manager (BLS)",
+        "description": "Lightweight login and session launcher for Unix-like systems. Designed to replace traditional display managers with direct control over authentication and session startup. Focuses on minimal dependency and low-level system interaction.",
+        "link": "#"
+      },
       "portfolio": {
         "title": "tayfunucuncu.dev",
         "description": "Self hosted portfolio website with clean architecture.",
