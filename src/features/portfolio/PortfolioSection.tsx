@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion, Variants } from "framer-motion";
 import { Link } from "@/i18n/routing";
-import { ChevronRight, Layout, Database, Sparkles, Briefcase, Wallet, ShieldCheck } from "lucide-react";
+import { ChevronRight, Layout, Database, Sparkles, Briefcase } from "lucide-react";
 
 export default function PortfolioSection() {
   const t = useTranslations("portfolio.projects");
@@ -11,8 +11,6 @@ export default function PortfolioSection() {
   const featuredProjects = [
     { id: "gymlogger", key: "gymlogger", icon: <Database className="w-6 h-6 text-green" /> },
     { id: "portfolio", key: "portfolio", icon: <Layout className="w-6 h-6 text-blue" /> },
-    { id: "budgetbuddy", key: "budgetbuddy", icon: <Wallet className="w-6 h-6 text-peach" /> },
-    { id: "bsl", key: "bsl", icon: <ShieldCheck className="w-6 h-6 text-red" /> },
   ];
 
   const containerVariants: Variants = {
