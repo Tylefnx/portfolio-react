@@ -9,7 +9,7 @@ export default function HomeSection() {
   const { scrollToSection } = useScrollToSection();
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center pt-32 pb-20 lg:pt-40 lg:pb-32 p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
+    <section className="h-[100dvh] w-full snap-start flex flex-col items-center justify-center pt-20 pb-12 lg:pt-24 lg:pb-16 p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-24 items-center">
         {/* Left Col - Hero */}
         <motion.div

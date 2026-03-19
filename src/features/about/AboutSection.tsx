@@ -37,7 +37,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center pt-32 pb-20 lg:pt-40 lg:pb-32 p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
+    <section className="min-h-[100dvh] w-full snap-start snap-end flex flex-col items-center justify-center pt-28 pb-16 lg:pt-32 lg:pb-24 p-6 lg:p-12 relative overflow-hidden z-0 bg-transparent">
       <motion.div 
         variants={containerVariants}
         initial="hidden"
