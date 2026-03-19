@@ -45,10 +45,12 @@ export default function ServicesSection() {
         className="max-w-6xl w-full mx-auto flex flex-col gap-16 z-10"
       >
         <motion.div variants={itemVariants} className="text-center">
-          <h2 className="text-3xl lg:text-4xl text-text font-bold mb-4 flex items-center justify-center gap-3">
-            <span className="w-8 h-px bg-surface2" />
-            <span className="text-teal">~/</span>services
-            <span className="w-8 h-px bg-surface2" />
+          <h2 className="text-3xl lg:text-5xl font-bold tracking-tight flex items-center justify-center gap-3">
+            <span className="w-12 h-px bg-surface2/30" />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky to-blue">
+               {t("title")}
+            </span>
+            <span className="w-12 h-px bg-surface2/30" />
           </h2>
         </motion.div>
 

@@ -40,8 +40,10 @@ export default function ContactSection() {
       >
         {/* Left Side: Text */}
         <motion.div variants={itemVariants} className="flex-1 flex flex-col gap-6">
-          <h2 className="text-4xl lg:text-5xl font-bold text-text">
-            {t("title")}
+          <h2 className="text-4xl lg:text-6xl font-black tracking-tighter">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-peach via-yellow to-flamingo">
+              {t("title")}
+            </span>
           </h2>
           <p className="text-lg text-subtext0 leading-relaxed whitespace-pre-line">
             {t("subtitle")}

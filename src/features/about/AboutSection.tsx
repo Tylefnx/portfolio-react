@@ -48,8 +48,10 @@ export default function AboutSection() {
             <div className="w-12 h-12 rounded-2xl bg-peach/10 border border-peach/20 flex items-center justify-center">
               <User className="w-6 h-6 text-peach" />
             </div>
-            <h2 className="text-3xl lg:text-4xl text-text font-bold">
-              <span className="text-peach">~/</span>about_me
+            <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal to-emerald">
+                {t("header.title")}
+              </span>
             </h2>
           </div>
           <p className="text-xl lg:text-2xl text-subtext0 leading-relaxed max-w-3xl font-medium">
