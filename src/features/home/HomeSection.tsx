@@ -24,7 +24,7 @@ export default function HomeSection() {
             </span>
           </div>
 
-          <h1 className="text-4xl lg:text-6xl font-black leading-[1.15] tracking-tight">
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black leading-[1.15] tracking-tight whitespace-pre-line">
             <span className="bg-clip-text text-transparent bg-gradient-to-br from-text via-text to-blue/50">
               {t("heroTitle")}
             </span>

@@ -12,8 +12,8 @@
   },
   "home": {
     "statusPill": "Available for Freelance Work",
-    "heroTitle": "Mobile Engineering Meets\nSystem Administration.",
-    "heroDescription": "I don't just build apps; I architect secure, stable, and optimized digital ecosystems. Specialized in Flutter, Golang, and Linux Systems.",
+    "heroTitle": "I build mobile apps and\nbackend systems that actually scale.",
+    "heroDescription": "From idea to production — fast, stable, and built to handle real users.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
