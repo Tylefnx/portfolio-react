@@ -41,9 +41,6 @@ export default function ProjectsPage() {
     { id: "media_server", key: "media_server" },
     { id: "bls", key: "bls" },
     { id: "portfolio", key: "portfolio" },
-    { id: "gymlogger", key: "gymlogger" },
-    { id: "budgetbuddy", key: "budgetbuddy" },
-    { id: "bsl", key: "bsl" },
   ];
 
 

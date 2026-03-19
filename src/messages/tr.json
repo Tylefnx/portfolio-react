@@ -101,9 +101,9 @@
       },
       "portfolio": {
         "title": "tayfunucuncu.dev",
-        "description": "Temiz mimari ile hazırlanmış, kendi sunucumda barındırılan portfolyo sitesi.",
+        "description": "Temiz mimari ile hazırlanmış, özel homelab ortamında barındırılan portfolyo sitesi. Sorgulanabilir homelab kararlarını içeren bir blog çok yakında.",
         "link": "https://github.com/Tylefnx/tayfunucuncu.dev"
-      },
+      }
       "gymlogger": {
         "title": "Gymlogger",
         "description": "Go backend ve LSTM modeli içeren yapay zeka destekli fitness takip uygulaması.",

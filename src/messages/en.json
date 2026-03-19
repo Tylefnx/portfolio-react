@@ -101,9 +101,9 @@
       },
       "portfolio": {
         "title": "tayfunucuncu.dev",
-        "description": "Self hosted portfolio website with clean architecture.",
+        "description": "Self-hosted portfolio website with clean architecture, running on a custom homelab setup. A blog covering questionable homelab decisions is coming soon.",
         "link": "https://github.com/Tylefnx/tayfunucuncu.dev"
-      },
+      }
       "gymlogger": {
         "title": "Gymlogger",
         "description": "AI-powered fitness tracking mobile application with Go backend and an LSTM model.",

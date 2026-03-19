@@ -14,8 +14,7 @@ export default function PortfolioSection() {
     { id: "media_server", key: "media_server", icon: <Video className="w-6 h-6 text-green" /> },
     { id: "bls", key: "bls", icon: <Shield className="w-6 h-6 text-mauve" /> },
   ];
- Broadway
- Broadway
+
 
 
 
@@ -64,7 +63,7 @@ export default function PortfolioSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
- Broadway
+
 
           {featuredProjects.map((proj) => (
             <motion.div
