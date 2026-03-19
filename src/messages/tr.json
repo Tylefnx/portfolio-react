@@ -22,7 +22,7 @@
   "about": {
     "header": {
       "title": "Nasıl Çalışırım",
-      "description": "Güvenilir sistemlerle desteklenen mobil uygulamalar. Gerçek kullanımda hızlı ve kararlı kalacak şekilde tasarlandı."
+      "description": "Güvenilir sistemlerle desteklenen mobil uygulamalar — gerçek kullanımda hızlı ve kararlı kalacak şekilde tasarlandı."
     },
     "mission": {
       "title": "Önce Prodüksiyon Anlayışı",
@@ -45,26 +45,26 @@
     "title": "Neler Yapıyorum",
     "items": {
       "mobile": {
-        "title": "Mobil Geliştirme",
-        "desc": "Flutter ve Temiz Mimari kullanarak yüksek performanslı iOS ve Android uygulamaları."
+        "title": "Mobil Uygulamalar",
+        "desc": "Güvenilir backend sistemleri ile desteklenen, gerçek kullanım için tasarlanmış hızlı ve duyarlı mobil uygulamalar."
       },
       "backend": {
         "title": "Backend Mühendisliği",
-        "desc": "Golang, Python ve Gin çatısı ile ölçeklenebilir sunucu çözümleri."
+        "desc": "Gerçek dünya koşullarına dayanacak şekilde inşa edilmiş sunucu tarafı sistemler — kararlı, sürdürülebilir ve öngörülebilir."
       },
       "system": {
         "title": "Sistem Yönetimi",
-        "desc": "Linux Sistemleri, Docker, Nginx ve VPS yönetimi konularında uzmanlık."
+        "desc": "Tutarlılık, kesintisiz çalışma ve minimum bakım odaklı dağıtım ve altyapı yönetimi."
       },
       "security": {
         "title": "Ağ ve Güvenlik",
-        "desc": "Güvenli ağ mimarileri ve VPN protokol yapılandırmaları."
+        "desc": "Sistemleri gereksiz karmaşıklık olmadan koruyan, güvenli ve iyi yapılandırılmış ağ kurulumları."
       }
     }
   },
   "contact": {
-    "title": "İletişime Geç",
-    "subtitle": "Yüksek performanslı bir sonraki projenizi konuşmaya hazır mısınız?\nForm üzerinden veya sosyal medyadan bana ulaşabilirsiniz.",
+    "title": "Bir sistem kurmaya\nveya\ndüzeltmeye mi ihtiyacınız var?",
+    "subtitle": "Ölçeklenebilir ve güvenilir şekilde çalışması gereken bir şey inşa ediyorsanız, çekinmeden iletişime geçebilirsiniz.",
     "form": {
       "name": "Adınız Soyadınız",
       "namePlaceholder": "Örn: Tayfun Üçüncü",

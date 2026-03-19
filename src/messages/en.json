@@ -22,7 +22,7 @@
   "about": {
     "header": {
       "title": "How I Work",
-      "description": "Mobile apps backed by reliable systems. Built to stay fast and stable under real usage."
+      "description": "Mobile apps backed by reliable systems — built to stay fast and stable under real usage."
     },
     "mission": {
       "title": "Production-first mindset",
@@ -45,26 +45,26 @@
     "title": "What I Do",
     "items": {
       "mobile": {
-        "title": "Mobile Development",
-        "desc": "High-performance iOS & Android apps using Flutter and Clean Architecture."
+        "title": "Mobile Applications",
+        "desc": "Fast and responsive mobile apps designed for real usage, supported by reliable backend systems."
       },
       "backend": {
         "title": "Backend Engineering",
-        "desc": "Scalable server-side solutions with Golang, Python, and Gin framework."
+        "desc": "Server-side systems built to handle real-world conditions — stable, maintainable, and predictable."
       },
       "system": {
         "title": "System Administration",
-        "desc": "Expertise in Linux Systems, Docker, Nginx, and VPS management."
+        "desc": "Deployment and infrastructure handled with a focus on consistency, uptime, and minimal maintenance."
       },
       "security": {
         "title": "Network & Security",
-        "desc": "Secure network architectures and VPN protocol configurations."
+        "desc": "Secure and well-structured networking setups that protect systems without unnecessary complexity."
       }
     }
   },
   "contact": {
-    "title": "Get In Touch",
-    "subtitle": "Ready to discuss your next high-performance project?\nReach out via the form or social media.",
+    "title": "Need to build\nor\nfix a system?",
+    "subtitle": "If you're building something that needs to work reliably at scale, feel free to reach out.",
     "form": {
       "name": "Your Name",
       "namePlaceholder": "e.g. Tayfun Üçüncü",
