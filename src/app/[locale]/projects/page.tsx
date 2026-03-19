@@ -3,7 +3,8 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { Github, Terminal, Layout, Shield, Database } from "lucide-react";
+import { Github, Terminal, Layout, Shield, Database, ArrowLeft } from "lucide-react";
+import { Link } from "@/i18n/routing";
 import DynamicBackground from "@/shared/components/DynamicBackground";
 import { useScroll } from "framer-motion";
 
@@ -23,6 +24,7 @@ const projectColors = {
 
 export default function ProjectsPage() {
   const t = useTranslations("portfolio.projects");
+  const tNav = useTranslations("nav");
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ container: containerRef });
 
@@ -36,6 +38,24 @@ export default function ProjectsPage() {
   return (
     <>
       <DynamicBackground scrollYProgress={scrollYProgress} />
+      
+      {/* Back Button */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="fixed top-8 left-8 z-50 transition-all"
+      >
+        <Link 
+          href="/" 
+          className="group flex items-center gap-3 px-5 py-2.5 bg-mantle/60 backdrop-blur-xl border border-surface0 hover:border-blue/50 rounded-2xl transition-all duration-300 hover:-translate-x-1 shadow-2xl"
+        >
+          <ArrowLeft className="w-5 h-5 text-blue group-hover:scale-110 transition-transform" />
+          <span className="text-sm font-bold text-text group-hover:text-blue transition-colors">
+            {tNav("backToHome")}
+          </span>
+        </Link>
+      </motion.div>
+
       <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory bg-transparent custom-scrollbar relative">
         
         {/* Snap Sections */}

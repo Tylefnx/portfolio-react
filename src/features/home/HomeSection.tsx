@@ -8,7 +8,7 @@ export default function HomeSection() {
 
   return (
     <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
-      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-24 items-center">
         {/* Left Col - Hero */}
         <motion.div
           initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
@@ -24,7 +24,7 @@ export default function HomeSection() {
             </span>
           </div>
 
-          <h1 className="text-4xl lg:text-7xl font-black leading-[1.1] tracking-tight whitespace-pre-line">
+          <h1 className="text-4xl lg:text-6xl font-black leading-[1.15] tracking-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-br from-text via-text to-blue/50">
               {t("heroTitle")}
             </span>
