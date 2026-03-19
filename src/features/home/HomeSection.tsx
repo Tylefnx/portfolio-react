@@ -44,6 +44,7 @@ export default function HomeSection() {
         {/* Right Col - Terminal Entry Point */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
+          animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}

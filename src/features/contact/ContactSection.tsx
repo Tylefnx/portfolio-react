@@ -1,24 +1,45 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Send, Mail, MapPin } from "lucide-react";
 
 export default function ContactSection() {
   const t = useTranslations("contact");
   const footerT = useTranslations("footer");
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      filter: "blur(0px)",
+      transition: { duration: 0.5, ease: "easeOut" }
+    },
+  };
+
   return (
     <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
-      <div className="flex-1 max-w-5xl w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 z-10 py-12">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-100px" }}
+        className="flex-1 max-w-5xl w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 z-10 py-12"
+      >
         {/* Left Side: Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: false, margin: "-100px" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex-1 flex flex-col gap-6"
-        >
+        <motion.div variants={itemVariants} className="flex-1 flex flex-col gap-6">
           <h2 className="text-4xl lg:text-5xl font-bold text-text">
             {t("title")}
           </h2>
@@ -44,10 +65,7 @@ export default function ContactSection() {
 
         {/* Right Side: Form */}
         <motion.div
-          initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: false, margin: "-100px" }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          variants={itemVariants}
           className="w-full lg:w-[450px] bg-mantle/40 backdrop-blur-xl border border-surface0 p-8 rounded-3xl shadow-2xl"
         >
           <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
@@ -87,8 +105,7 @@ export default function ContactSection() {
             </button>
           </form>
         </motion.div>
-      </div>
-
+      </motion.div>
       {/* Footer */}
       <div className="w-full h-16 border-t border-surface0 mt-auto flex items-center justify-center text-sm text-surface2 pointer-events-none">
         {footerT("copyright")}

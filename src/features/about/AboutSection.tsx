@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import { User } from "lucide-react";
 
 export default function AboutSection() {
   const t = useTranslations("about");
@@ -11,39 +12,59 @@ export default function AboutSection() {
     { title: t("vision.title"), content: t("vision.content") },
   ];
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      filter: "blur(0px)",
+      transition: { duration: 0.5, ease: "easeOut" }
+    },
+  };
+
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative z-0">
-      <div className="max-w-4xl w-full mx-auto flex flex-col gap-12 z-10">
-        
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-100px" }}
+        className="max-w-6xl w-full mx-auto flex flex-col gap-12 lg:gap-20 z-10"
+      >
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          viewport={{ once: false, margin: "-100px" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex flex-col gap-4"
-        >
+        <motion.div variants={itemVariants} className="flex flex-col gap-4">
           <div className="flex items-center gap-4 mb-2">
+            <div className="w-12 h-12 rounded-2xl bg-peach/10 border border-peach/20 flex items-center justify-center">
+              <User className="w-6 h-6 text-peach" />
+            </div>
             <h2 className="text-3xl lg:text-4xl text-text font-bold">
-              / <span className="text-blue">{t("header.title")}</span>
+              <span className="text-peach">~/</span>about_me
             </h2>
           </div>
-          <p className="text-lg lg:text-xl text-subtext0 leading-relaxed max-w-2xl">
-            {t("header.description")}
+          <p className="text-xl lg:text-2xl text-subtext0 leading-relaxed max-w-3xl font-medium">
+            {t("description")}
           </p>
         </motion.div>
 
         <div className="w-full h-px bg-surface0" />
 
         {/* Details Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {details.map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ once: false, margin: "-100px" }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+              variants={itemVariants}
               className="flex flex-col gap-4 p-8 rounded-3xl bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 group shadow-xl hover:-translate-y-2 relative overflow-hidden"
             >
               {/* Subtle top ambient glow inside the card */}
@@ -59,7 +80,7 @@ export default function AboutSection() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Link } from "@/i18n/routing";
-import { ChevronRight, Layout, Database, Sparkles } from "lucide-react";
+import { ChevronRight, Layout, Database, Sparkles, Briefcase } from "lucide-react";
 
 export default function PortfolioSection() {
   const t = useTranslations("portfolio.projects");
@@ -13,36 +13,55 @@ export default function PortfolioSection() {
     { id: "portfolio", key: "portfolio", icon: <Layout className="w-6 h-6 text-blue" /> },
   ];
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
-      <div className="max-w-5xl w-full mx-auto flex flex-col gap-12 z-10">
-        
-        <motion.div
-           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-           viewport={{ once: false, margin: "-100px" }}
-           transition={{ duration: 0.5 }}
-           className="flex flex-col gap-4 text-center lg:text-left"
-        >
+    <section className="min-h-[100dvh] w-full snap-start snap-always flex flex-col items-center justify-center p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-100px" }}
+        className="max-w-5xl w-full mx-auto flex flex-col gap-12 z-10"
+      >
+        <motion.div variants={itemVariants} className="flex flex-col gap-4 text-center lg:text-left">
           <div className="flex items-center gap-3 justify-center lg:justify-start">
-             <span className="w-12 h-px bg-surface2 invisible lg:visible" />
-             <h2 className="text-3xl lg:text-4xl text-text font-bold">
-               Featured <span className="text-mauve">Projects</span>
-             </h2>
+            <div className="w-12 h-12 rounded-2xl bg-blue/10 border border-blue/20 flex items-center justify-center">
+               <Briefcase className="w-6 h-6 text-blue" />
+            </div>
+            <h2 className="text-3xl lg:text-4xl text-text font-bold tracking-tight">
+              <span className="text-blue">~/</span>portfolio
+            </h2>
           </div>
-          <p className="text-lg text-subtext0 max-w-2xl mx-auto lg:mx-0">
-            A selection of my most impactful works, spanning from AI-powered mobile apps to high-performance systems.
+          <p className="text-lg lg:text-xl text-subtext0 leading-relaxed font-medium max-w-2xl">
+            {t("description")}
           </p>
         </motion.div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {featuredProjects.map((proj, idx) => (
+          {featuredProjects.map((proj) => (
             <motion.div
               key={proj.id}
-              initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              viewport={{ once: false, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              variants={itemVariants}
               className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
             >
                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-surface0/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -72,10 +91,7 @@ export default function PortfolioSection() {
 
         {/* Explore More CTA */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.3 }}
+          variants={itemVariants}
           className="flex justify-center mt-6"
         >
           <Link
@@ -96,8 +112,7 @@ export default function PortfolioSection() {
              </div>
           </Link>
         </motion.div>
-      </div>
-
+      </motion.div>
     </section>
   );
 }
