@@ -65,7 +65,8 @@ export default function AboutSection() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="flex flex-col gap-4 p-8 rounded-3xl bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 group shadow-xl hover:-translate-y-2 relative overflow-hidden"
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="flex flex-col gap-4 p-8 rounded-3xl bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-colors duration-300 group shadow-xl relative overflow-hidden"
             >
               {/* Subtle top ambient glow inside the card */}
               <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-peach/30 to-transparent opacity-50" />

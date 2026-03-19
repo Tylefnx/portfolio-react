@@ -57,7 +57,8 @@ export default function ServicesSection() {
             <motion.div
               key={svc.key}
               variants={itemVariants}
-              className="bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-5 group shadow-xl hover:-translate-y-2"
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-colors duration-300 p-8 rounded-3xl flex flex-col gap-5 group shadow-xl"
             >
               <div className="w-16 h-16 rounded-xl bg-surface0/40 backdrop-blur-md border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
                 {svc.icon}

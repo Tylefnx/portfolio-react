@@ -62,7 +62,8 @@ export default function PortfolioSection() {
             <motion.div
               key={proj.id}
               variants={itemVariants}
-              className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-all duration-500 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-colors duration-300 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
             >
                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-surface0/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                
