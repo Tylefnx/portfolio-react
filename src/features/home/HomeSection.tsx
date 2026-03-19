@@ -24,8 +24,10 @@ export default function HomeSection() {
             </span>
           </div>
 
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl text-text font-bold leading-tight tracking-tight whitespace-pre-line">
-            {t("heroTitle")}
+          <h1 className="text-4xl lg:text-7xl font-black leading-tight tracking-tighter whitespace-pre-line">
+            <span className="bg-clip-text text-transparent bg-gradient-to-br from-text via-text to-blue/50">
+              {t("heroTitle")}
+            </span>
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-subtext0 leading-relaxed max-w-xl">
             {t("heroDescription")}

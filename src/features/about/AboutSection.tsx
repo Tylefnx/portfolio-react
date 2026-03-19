@@ -48,8 +48,8 @@ export default function AboutSection() {
             <div className="w-12 h-12 rounded-2xl bg-peach/10 border border-peach/20 flex items-center justify-center">
               <User className="w-6 h-6 text-peach" />
             </div>
-            <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal to-emerald">
+            <h2 className="text-3xl lg:text-5xl font-black tracking-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal via-emerald to-green">
                 {t("header.title")}
               </span>
             </h2>
