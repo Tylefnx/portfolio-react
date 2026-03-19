@@ -14,6 +14,8 @@
     "statusPill": "Freelance Projeler İçin Müsait",
     "heroTitle": "Hızlı uygulamalar.\nKırılmayan sistemler.",
     "heroDescription": "Mobil, backend ve altyapı — etkileyici görünmek için değil, gerçek problemleri otomasyon ve yapay zeka ile çözmek için, prodüksiyon odaklı geliştirildi.",
+    "terminalCardTitle": "Terminalleri mi tercih edersin?",
+    "terminalCardDescription": "Keşfetmenin daha hızlı bir yolu var — portfolyomun komut satırı versiyonu.",
     "viewProjects": "Projeleri İncele",
     "contactMe": "İletişime Geç"
   },
@@ -90,8 +92,6 @@
     }
   },
   "terminal": {
-    "pageTitle": "Terminalleri mi tercih edersin?",
-    "pageDescription": "Keşfetmenin daha hızlı bir yolu var — portfolyomun komut satırı versiyonu.",
     "welcome": [
       "Tayfun OS v1.0.0'a Hoş Geldiniz (Gentoo/Linux)",
       "Sistem başlatıldı. Tüm servisler aktif ve güvenli.",

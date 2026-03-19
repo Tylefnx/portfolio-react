@@ -14,6 +14,8 @@
     "statusPill": "Available for Freelance Work",
     "heroTitle": "Fast apps.\nSystems that don’t break.",
     "heroDescription": "Mobile, backend, and infrastructure — built for production, using automation and AI to solve real problems, not to look impressive.",
+    "terminalCardTitle": "Prefer terminals?",
+    "terminalCardDescription": "There’s a faster way to explore — a command-line version of my portfolio.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me"
   },
@@ -91,7 +93,7 @@
   },
   "terminal": {
     "pageTitle": "Prefer terminals?",
-    "pageDescription": "There’s a faster way to explore — a command-line version of my portfolio.",
+    "pageDescription": "There’s a faster way to explore — a CLI version of my portfolio.",
     "welcome": [
       "Welcome to Tayfun OS v1.0.0 (Gentoo/Linux)",
       "System initialized. All services active and secure.",

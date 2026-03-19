@@ -111,14 +111,14 @@ export default function HomeSection() {
                   </div>
                   <div className="space-y-1">
                     <h3 className="text-2xl lg:text-3xl font-bold text-text group-hover:text-blue transition-colors duration-500 flex items-center gap-3">
-                      Interactive Terminal
+                      {t("terminalCardTitle")}
                       <Sparkles className="w-6 h-6 text-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </h3>
                   </div>
                 </div>
                 
                 <p className="text-lg text-subtext0 leading-relaxed font-medium">
-                  Explore my projects, skills, and background through a fast, interactive command-line interface.
+                  {t("terminalCardDescription")}
                 </p>
 
                 <div className="flex items-center gap-2 text-blue font-bold text-sm tracking-widest uppercase mt-2 group-hover:translate-x-2 transition-transform duration-500">
