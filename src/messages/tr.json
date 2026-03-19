@@ -79,6 +79,11 @@
     "title": "Öne Çıkan Projeler",
     "description": "Kararlılık, performans ve temiz mimari odaklı geliştirilmiş sistemler ve uygulamalar koleksiyonu.",
     "projects": {
+      "industaiq": {
+        "title": "IndustAIQ Konsolu",
+        "description": "Endüstriyel verileri gerçek zamanlı yorumlayan sistem. Makine hata kodlarını ve ham sinyalleri insan tarafından okunabilir içgörülere dönüştürerek duruş sürelerini azaltır ve karar verme sürecini iyileştirir.",
+        "link": "https://github.com/TayfunUcuncu/industaiq-console"
+      },
       "portfolio": {
         "title": "tayfunucuncu.dev",
         "description": "Temiz mimari ile hazırlanmış, kendi sunucumda barındırılan portfolyo sitesi.",

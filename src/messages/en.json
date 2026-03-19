@@ -79,6 +79,11 @@
     "title": "Featured Projects",
     "description": "A collection of systems and applications built with a focus on stability, performance, and clean architecture.",
     "projects": {
+      "industaiq": {
+        "title": "IndustAIQ Console",
+        "description": "Real-time industrial data interpretation system. It turns machine error codes and raw signals into human-readable insights, reducing downtime and improving decision-making.",
+        "link": "https://github.com/TayfunUcuncu/industaiq-console"
+      },
       "portfolio": {
         "title": "tayfunucuncu.dev",
         "description": "Self hosted portfolio website with clean architecture.",

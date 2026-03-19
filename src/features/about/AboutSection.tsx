@@ -13,7 +13,7 @@ export default function AboutSection() {
     { title: t("ownership.title"), content: t("ownership.content"), icon: <Layers className="w-7 h-7" /> },
     { title: t("automation.title"), content: t("automation.content"), icon: <Cpu className="w-7 h-7" /> },
   ];
- Broadway
+
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
