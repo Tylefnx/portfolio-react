@@ -6,12 +6,13 @@ import { Link } from "@/i18n/routing";
 import { ChevronRight, Layout, Database, Sparkles, Briefcase } from "lucide-react";
 
 export default function PortfolioSection() {
-  const t = useTranslations("portfolio.projects");
+  const t = useTranslations("portfolio");
 
   const featuredProjects = [
     { id: "gymlogger", key: "gymlogger", icon: <Database className="w-6 h-6 text-green" /> },
     { id: "portfolio", key: "portfolio", icon: <Layout className="w-6 h-6 text-blue" /> },
   ];
+ Broadway
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -54,7 +55,6 @@ export default function PortfolioSection() {
           <p className="text-lg lg:text-xl text-subtext0 leading-relaxed max-w-2xl mx-auto font-medium">
             {t("description")}
           </p>
- Broadway
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
@@ -73,10 +73,10 @@ export default function PortfolioSection() {
 
               <div className="relative z-10 space-y-3">
                 <h3 className="text-2xl text-text font-bold group-hover:text-mauve transition-colors">
-                  {t(`${proj.key}.title`)}
+                  {t(`projects.${proj.key}.title`)}
                 </h3>
                 <p className="text-subtext0 leading-relaxed line-clamp-2">
-                  {t(`${proj.key}.description`)}
+                  {t(`projects.${proj.key}.description`)}
                 </p>
               </div>
 

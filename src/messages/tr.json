@@ -76,6 +76,8 @@
     }
   },
   "portfolio": {
+    "title": "Öne Çıkan Projeler",
+    "description": "Kararlılık, performans ve temiz mimari odaklı geliştirilmiş sistemler ve uygulamalar koleksiyonu.",
     "projects": {
       "portfolio": {
         "title": "tayfunucuncu.dev",

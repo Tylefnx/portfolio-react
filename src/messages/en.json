@@ -63,7 +63,7 @@
     }
   },
   "contact": {
-    "title": "Need to build\nor\nfix a system?",
+    "title": "Need to build \n or \n fix a system?",
     "subtitle": "If you're building something that needs to work reliably at scale, feel free to reach out.",
     "form": {
       "name": "Your Name",
@@ -76,6 +76,8 @@
     }
   },
   "portfolio": {
+    "title": "Featured Projects",
+    "description": "A collection of systems and applications built with a focus on stability, performance, and clean architecture.",
     "projects": {
       "portfolio": {
         "title": "tayfunucuncu.dev",
