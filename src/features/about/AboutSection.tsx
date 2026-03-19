@@ -2,17 +2,18 @@
 
 import { useTranslations } from "next-intl";
 import { motion, Variants } from "framer-motion";
-import { User } from "lucide-react";
+import { Zap, ShieldCheck, Layers, Cpu } from "lucide-react";
 
 export default function AboutSection() {
   const t = useTranslations("about");
 
   const details = [
-    { title: t("mission.title"), content: t("mission.content") },
-    { title: t("vision.title"), content: t("vision.content") },
-    { title: t("ownership.title"), content: t("ownership.content") },
-    { title: t("automation.title"), content: t("automation.content") },
+    { title: t("mission.title"), content: t("mission.content"), icon: <Zap className="w-7 h-7" /> },
+    { title: t("vision.title"), content: t("vision.content"), icon: <ShieldCheck className="w-7 h-7" /> },
+    { title: t("ownership.title"), content: t("ownership.content"), icon: <Layers className="w-7 h-7" /> },
+    { title: t("automation.title"), content: t("automation.content"), icon: <Cpu className="w-7 h-7" /> },
   ];
+ Broadway
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -68,7 +69,7 @@ export default function AboutSection() {
               className="flex flex-col gap-5 p-8 rounded-3xl bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-colors duration-300 group shadow-xl relative overflow-hidden"
             >
               <div className="w-14 h-14 rounded-xl bg-surface0/40 backdrop-blur-md border border-surface1 flex items-center justify-center text-teal group-hover:scale-110 transition-transform duration-300 shadow-md">
-                <span className="text-xl font-black tracking-widest">&gt;_</span>
+                {item.icon}
               </div>
               
               <div className="space-y-3">

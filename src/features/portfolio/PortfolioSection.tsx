@@ -12,7 +12,6 @@ export default function PortfolioSection() {
     { id: "gymlogger", key: "gymlogger", icon: <Database className="w-6 h-6 text-green" /> },
     { id: "portfolio", key: "portfolio", icon: <Layout className="w-6 h-6 text-blue" /> },
   ];
- Broadway
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
