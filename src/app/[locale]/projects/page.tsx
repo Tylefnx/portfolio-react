@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-import { useRef } from "react";
-import { Github, Terminal, Layout, Shield, Database, ArrowLeft, Activity, Radio, Video, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
+import { Github, Terminal, Layout, Shield, Database, ArrowLeft, Activity, Radio, Video, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import DynamicBackground from "@/shared/components/DynamicBackground";
 import { useScroll } from "framer-motion";
@@ -29,6 +29,81 @@ const projectColors = {
   bsl: "border-mauve text-mauve bg-mauve/5",
 };
 
+interface ProjectGalleryProps {
+  projectId: string;
+  images: string[];
+}
+
+function ProjectGallery({ projectId, images }: ProjectGalleryProps) {
+  const [index, setIndex] = useState(0);
+
+  const next = () => setIndex((prev) => (prev + 1) % images.length);
+  const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
+
+  return (
+    <div className="aspect-video bg-mantle/40 backdrop-blur-xl rounded-3xl border border-surface0 shadow-2xl flex items-center justify-center relative overflow-hidden group">
+      <AnimatePresence mode="wait">
+        <motion.div
+           key={index}
+           initial={{ opacity: 0, x: 20 }}
+           animate={{ opacity: 1, x: 0 }}
+           exit={{ opacity: 0, x: -20 }}
+           transition={{ duration: 0.3 }}
+           className="absolute inset-0 flex items-center justify-center"
+        >
+          {images.length > 0 ? (
+            <img 
+              src={images[index]} 
+              alt={`${projectId} preview ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-blue/5 group-hover:bg-blue/10 transition-colors duration-500" />
+              <span className="text-surface2 font-bold tracking-widest uppercase italic group-hover:scale-110 transition-transform duration-500">
+                [ {projectId} preview ]
+              </span>
+            </>
+          )}
+        </motion.div>
+      </AnimatePresence>
+
+      {images.length > 1 && (
+        <>
+          <button 
+            onClick={prev}
+            className="absolute left-4 p-2 bg-crust/50 hover:bg-blue/20 rounded-full border border-surface0 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all z-20"
+          >
+            <ChevronLeft className="w-6 h-6 text-text" />
+          </button>
+          <button 
+            onClick={next}
+            className="absolute right-4 p-2 bg-crust/50 hover:bg-blue/20 rounded-full border border-surface0 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all z-20"
+          >
+            <ChevronRight className="w-6 h-6 text-text" />
+          </button>
+          
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+            {images.map((_, i) => (
+              <div 
+                key={i} 
+                className={`w-1.5 h-1.5 rounded-full transition-all ${i === index ? 'bg-blue w-4' : 'bg-surface2'}`} 
+              />
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* Decorative dots (always visible) */}
+      <div className="absolute top-4 left-4 flex gap-1.5 z-20">
+        <div className="w-2.5 h-2.5 rounded-full bg-red/40" />
+        <div className="w-2.5 h-2.5 rounded-full bg-yellow/40" />
+        <div className="w-2.5 h-2.5 rounded-full bg-green/40" />
+      </div>
+    </div>
+  );
+}
+
 export default function ProjectsPage() {
   const t = useTranslations("portfolio.projects");
   const tNav = useTranslations("nav");
@@ -36,11 +111,11 @@ export default function ProjectsPage() {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const projects = [
-    { id: "industaiq", key: "industaiq", tags: ["Python", "RAG", "ML", "Self-Hosted"] },
-    { id: "telemetry", key: "telemetry", tags: ["Rust", "Python", "Flutter", "Docker"] },
-    { id: "media_server", key: "media_server", tags: ["Go", "Flutter", "Linux", "Self-Hosted"] },
-    { id: "bls", key: "bls", tags: ["C", "Linux", "FreeBSD"] },
-    { id: "portfolio", key: "portfolio", tags: ["Next.js", "TypeScript", "Tailwind", "Self-Hosted"] },
+    { id: "industaiq", key: "industaiq", tags: ["Python", "RAG", "ML", "Self-Hosted"], images: [] },
+    { id: "telemetry", key: "telemetry", tags: ["Rust", "Python", "Flutter", "Docker"], images: [] },
+    { id: "media_server", key: "media_server", tags: ["Go", "Flutter", "Linux", "Self-Hosted"], images: [] },
+    { id: "bls", key: "bls", tags: ["C", "Linux", "FreeBSD"], images: [] },
+    { id: "portfolio", key: "portfolio", tags: ["Next.js", "TypeScript", "Tailwind", "Self-Hosted"], images: [] },
   ];
 
 
@@ -129,7 +204,8 @@ export default function ProjectsPage() {
                 </motion.div>
               )}
             </motion.div>
-            {/* Project Visual Placeholder */}
+
+            {/* Project Visual Gallery */}
             <motion.div
               initial={{ opacity: 0, scale: 0.5, rotate: 5 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -137,19 +213,7 @@ export default function ProjectsPage() {
               transition={{ type: "spring", stiffness: 100, damping: 15, delay: 0.2 }}
               className="relative hidden lg:block"
             >
-               <div className="aspect-video bg-mantle/40 backdrop-blur-xl rounded-3xl border border-surface0 shadow-2xl flex items-center justify-center relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-blue/5 group-hover:bg-blue/10 transition-colors duration-500" />
-                  <span className="text-surface2 font-bold tracking-widest uppercase italic group-hover:scale-110 transition-transform duration-500">
-                     [ {proj.id} preview ]
-                  </span>
-                  
-                  {/* Decorative elements */}
-                  <div className="absolute top-4 left-4 flex gap-1.5">
-                    <div className="w-2.5 h-2.5 rounded-full bg-red/40" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-yellow/40" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-green/40" />
-                  </div>
-               </div>
+               <ProjectGallery projectId={proj.id} images={proj.images || []} />
             </motion.div>
           </div>
 
