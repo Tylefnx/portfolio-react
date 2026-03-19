@@ -29,8 +29,12 @@
       "content": "Mobile-first systems, supported by reliable backend and infrastructure. Built to stay fast and stable under real load."
     },
     "vision": {
-      "title": "Core Values",
-      "content": "Maintaining high-performance standards through automation, security-first networking, and clean code principles."
+      "title": "Stability over complexity",
+      "content": "Simple, predictable systems beat over-engineered ones. Easier to maintain, easier to scale, less likely to break."
+    },
+    "ownership": {
+      "title": "End-to-end ownership",
+      "content": "From mobile app to deployment, everything is designed to work together — no fragile integrations between layers."
     }
   },
   "services": {

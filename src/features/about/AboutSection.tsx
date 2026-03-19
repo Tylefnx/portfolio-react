@@ -10,7 +10,9 @@ export default function AboutSection() {
   const details = [
     { title: t("mission.title"), content: t("mission.content") },
     { title: t("vision.title"), content: t("vision.content") },
+    { title: t("ownership.title"), content: t("ownership.content") },
   ];
+ Broadway
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -55,7 +57,8 @@ export default function AboutSection() {
             </h2>
           </div>
           <p className="text-xl lg:text-2xl text-subtext0 leading-relaxed max-w-3xl font-medium">
-            {t("description")}
+            {t("header.description")}
+ Broadway
           </p>
         </motion.div>
 
