@@ -18,8 +18,8 @@ export default function PortfolioSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1,
+        staggerChildren: 0.08,
+        delayChildren: 0.08,
       },
     },
   };
@@ -30,7 +30,7 @@ export default function PortfolioSection() {
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: { duration: 0.4, ease: "easeOut" },
     },
   };
 
