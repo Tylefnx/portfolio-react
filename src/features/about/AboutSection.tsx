@@ -11,7 +11,9 @@ export default function AboutSection() {
     { title: t("mission.title"), content: t("mission.content") },
     { title: t("vision.title"), content: t("vision.content") },
     { title: t("ownership.title"), content: t("ownership.content") },
+    { title: t("automation.title"), content: t("automation.content") },
   ];
+ Broadway
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },

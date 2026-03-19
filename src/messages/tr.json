@@ -35,6 +35,10 @@
     "ownership": {
       "title": "Uçtan uca sahiplenme",
       "content": "Mobil uygulamadan dağıtıma kadar her şey bir arada çalışacak şekilde tasarlandı — katmanlar arasında kırılgan entegrasyonlar yok."
+    },
+    "automation": {
+      "title": "Pratik otomasyon",
+      "content": "Manuel iş yükünü azaltan ve sistem güvenilirliğini artıran yapay zeka destekli otomasyon."
     }
   },
   "services": {

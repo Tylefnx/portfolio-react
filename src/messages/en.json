@@ -35,6 +35,10 @@
     "ownership": {
       "title": "End-to-end ownership",
       "content": "From mobile app to deployment, everything is designed to work together — no fragile integrations between layers."
+    },
+    "automation": {
+      "title": "Practical automation",
+      "content": "AI-assisted automation that reduces manual work and improves system reliability."
     }
   },
   "services": {
