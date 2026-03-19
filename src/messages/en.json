@@ -100,7 +100,7 @@
         "link": "#"
       },
       "portfolio": {
-        "title": "tayfunzzucuncu.dev",
+        "title": "tayfunucuncu.dev",
         "description": "Self-hosted portfolio website with clean architecture, running on a custom homelab setup.",
         "blog_teaser": "A blog covering questionable homelab decisions is coming soon.",
         "link": "https://github.com/Tylefnx/tayfunucuncu.dev"

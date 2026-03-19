@@ -36,10 +36,10 @@ export default function ProjectsPage() {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const projects = [
-    { id: "industaiq", key: "industaiq", tags: ["Flutter", "Go", "Nats.io", "PostgreSQL"] },
-    { id: "telemetry", key: "telemetry", tags: ["C/C++", "Go", "MQTT", "Linux"] },
-    { id: "media_server", key: "media_server", tags: ["Go", "FFmpeg", "WebRTC", "Linux"] },
-    { id: "bls", key: "bls", tags: ["C", "ncurses", "Linux", "FreeBSD"] },
+    { id: "industaiq", key: "industaiq", tags: ["Python", "RAG", "ML", "Self-Hosted"] },
+    { id: "telemetry", key: "telemetry", tags: ["Rust", "Python", "Flutter", "Docker"] },
+    { id: "media_server", key: "media_server", tags: ["Go", "Flutter", "Linux", "Self-Hosted"] },
+    { id: "bls", key: "bls", tags: ["C", "Linux", "FreeBSD"] },
     { id: "portfolio", key: "portfolio", tags: ["Next.js", "TypeScript", "Tailwind", "Self-Hosted"] },
   ];
 
