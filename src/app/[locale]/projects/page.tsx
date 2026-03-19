@@ -36,11 +36,11 @@ export default function ProjectsPage() {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const projects = [
-    { id: "industaiq", key: "industaiq" },
-    { id: "telemetry", key: "telemetry" },
-    { id: "media_server", key: "media_server" },
-    { id: "bls", key: "bls" },
-    { id: "portfolio", key: "portfolio" },
+    { id: "industaiq", key: "industaiq", tags: ["Flutter", "Go", "Nats.io", "PostgreSQL"] },
+    { id: "telemetry", key: "telemetry", tags: ["C/C++", "Go", "MQTT", "Linux"] },
+    { id: "media_server", key: "media_server", tags: ["Go", "FFmpeg", "WebRTC", "Linux"] },
+    { id: "bls", key: "bls", tags: ["C", "ncurses", "Linux", "FreeBSD"] },
+    { id: "portfolio", key: "portfolio", tags: ["Next.js", "TypeScript", "Tailwind", "Self-Hosted"] },
   ];
 
 
@@ -97,8 +97,7 @@ export default function ProjectsPage() {
               </div>
 
               <div className="flex flex-wrap gap-3 mt-4">
-                 {/* Dummy tags for now, usually would come from data */}
-                 {["Next.js", "TypeScript", "Tailwind"].map(tag => (
+                 {proj.tags.map(tag => (
                    <span key={tag} className="px-3 py-1 bg-surface0/40 backdrop-blur-md rounded-lg text-xs font-mono text-subtext1 border border-surface1 shadow-sm">
                       {tag}
                    </span>
