@@ -89,6 +89,11 @@
         "description": "Düşük kaynaklı cihazlarda bile çalışacak şekilde tasarlanmış hafif endüstriyel telemetri platformu. Özel bir ağ geçidi üzerinden PLC verilerini toplar ve gerçek zamanlı iletir.",
         "link": "#"
       },
+      "media_server": {
+        "title": "Medya İşleme Sunucusu",
+        "description": "Video içeriğini işlemek ve sunmak için yüksek performanslı arka uç. Akış çözünürlüğünü ve medya birleştirmeyi harici araçlara güvenmeden dahili olarak yönetir.",
+        "link": "#"
+      },
       "portfolio": {
         "title": "tayfunucuncu.dev",
         "description": "Temiz mimari ile hazırlanmış, kendi sunucumda barındırılan portfolyo sitesi.",

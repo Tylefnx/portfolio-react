@@ -89,6 +89,11 @@
         "description": "Lightweight industrial telemetry platform designed to run even on low-resource devices. Collects PLC data through a custom gateway and delivers it to clients in real time. Focused on performance and modular system design.",
         "link": "#"
       },
+      "media_server": {
+        "title": "Media Ingestion Server",
+        "description": "High-performance backend for processing and delivering video content. Handles stream resolution and media assembly internally via a controlled worker system for stable performance under load.",
+        "link": "#"
+      },
       "portfolio": {
         "title": "tayfunucuncu.dev",
         "description": "Self hosted portfolio website with clean architecture.",
