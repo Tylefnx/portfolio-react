@@ -4,21 +4,23 @@ import { useAppStore } from "@/store/useAppStore";
 import { useTranslations } from "next-intl";
 import { Menu } from "lucide-react";
 import clsx from "clsx";
-import { Link, useRouter, usePathname } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
+import { useScrollToSection } from "@/shared/hooks/useScrollToSection";
+import { SECTIONS } from "@/shared/constants/sections";
 
 export default function CustomNavbar() {
   const { activeSection, setDrawerOpen } = useAppStore();
   const t = useTranslations("nav");
-  const router = useRouter();
   const pathname = usePathname();
+  const { scrollToSection } = useScrollToSection();
 
   // Full list of potential nav items
   const allNavItems = [
-    { label: t("home"), index: 0, href: "/" },
-    { label: t("about"), index: 1, href: "/" },
-    { label: t("services"), index: 3, href: "/" },
-    { label: t("contact"), index: 4, href: "/" },
-    { label: "Projects", index: 6, href: "/projects" },
+    { label: t("home"), index: SECTIONS[0].index, href: "/" as const },
+    { label: t("about"), index: SECTIONS[1].index, href: "/" as const },
+    { label: t("services"), index: SECTIONS[3].index, href: "/" as const },
+    { label: t("contact"), index: SECTIONS[4].index, href: "/" as const },
+    { label: "Projects", index: 6, href: "/projects" as const },
   ];
 
   // Filter items based on current page
@@ -35,17 +37,7 @@ export default function CustomNavbar() {
   });
 
   const handleNavClick = (item: typeof allNavItems[0]) => {
-    if (item.href !== pathname) {
-      router.push(item.href as any);
-      return;
-    }
-
-    if (pathname === "/") {
-      const sections = document.querySelectorAll("section");
-      if (sections[item.index]) {
-        sections[item.index].scrollIntoView({ behavior: "smooth" });
-      }
-    }
+    scrollToSection(item.index);
   };
 
   return (
