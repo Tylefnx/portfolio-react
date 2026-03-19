@@ -29,8 +29,12 @@
       "content": "Güvenilir backend ve altyapı ile desteklenen, mobil öncelikli sistemler. Gerçek yük altında hızlı ve kararlı kalacak şekilde geliştirildi."
     },
     "vision": {
-      "title": "Temel Değerler",
-      "content": "Otomasyon, güvenlik öncelikli ağ yapılandırmaları ve temiz kod prensipleriyle yüksek performans standartlarını korumak."
+      "title": "Karmaşa yerine kararlılık",
+      "content": "Basit ve öngörülebilir sistemler, aşırı mühendislik uygulanmış olanlardan daha iyidir. Bakımı daha kolay, ölçeklenmesi daha basittir ve bozulma olasılığı daha düşüktür."
+    },
+    "ownership": {
+      "title": "Uçtan uca sahiplenme",
+      "content": "Mobil uygulamadan dağıtıma kadar her şey bir arada çalışacak şekilde tasarlandı — katmanlar arasında kırılgan entegrasyonlar yok."
     }
   },
   "services": {
