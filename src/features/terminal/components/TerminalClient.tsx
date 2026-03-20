@@ -18,9 +18,9 @@ export default function TerminalClient() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="fixed bottom-8 left-1/2 -translate-x-1/2 lg:top-28 lg:left-[46px] lg:bottom-auto lg:translate-x-0 z-50 transition-all"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="fixed top-6 left-6 lg:top-28 lg:left-[46px] z-50 transition-all"
       >
         <Link 
           href="/" 
@@ -36,7 +36,7 @@ export default function TerminalClient() {
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-6xl w-full mx-auto flex flex-col gap-6 z-10 pt-24 md:pt-28"
+        className="max-w-6xl w-full mx-auto flex flex-col gap-4 z-10 pt-16 md:pt-20"
       >
         {/* Header Indicators */}
         <div className="flex items-center justify-end mb-2">
@@ -48,8 +48,8 @@ export default function TerminalClient() {
           </div>
         </div>
 
-        {/* Terminal Container - High/Full space */}
-        <div className="flex-1 min-h-[70vh]">
+        {/* Terminal Container */}
+        <div className="flex-1 lg:max-w-5xl mx-auto w-full">
            <TerminalView fullScreen={true} />
         </div>
       </motion.div>

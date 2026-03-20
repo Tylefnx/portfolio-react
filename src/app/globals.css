@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@utility gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+
 @theme inline {
   /* Catppuccin Mocha */
   --color-base: #1e1e2e;
@@ -9,6 +16,10 @@
   --color-surface0: #313244;
   --color-surface1: #45475a;
   --color-surface2: #585b70;
+
+  /* Performance-friendly blurs */
+  --blur-std: 8px;
+  --blur-heavy: 16px;
 
   --color-text: #cdd6f4;
   --color-subtext0: #a6adc8;
@@ -37,6 +48,10 @@
   --font-sans: var(--font-fira-code), sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-base);
   color: var(--color-text);
@@ -44,6 +59,11 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+/* Fixed navbar height (measured at runtime by `CustomNavbar`, with a safe fallback) */
+:root {
+  --nav-h: 88px;
 }
 
 /* Custom Scrollbar */
@@ -62,6 +82,23 @@ body {
 }
 
 /* Selection Color */
+/* Custom Scrollbar Utility */
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-surface1);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-surface2);
+  }
+}
+
 ::selection {
   background-color: var(--color-surface2);
   color: var(--color-text);

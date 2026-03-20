@@ -72,7 +72,10 @@
       "emailPlaceholder": "iletisim@tayfun.dev",
       "message": "Mesajınız",
       "messagePlaceholder": "Projenizden ve altyapı ihtiyaçlarınızdan bahsedin...",
-      "submit": "Mesajı Gönder"
+      "submit": "Mesajı Gönder",
+      "sending": "Gönderiliyor...",
+      "sent": "Mesaj Gönderildi!",
+      "error": "Bir hata oluştu. Lütfen tekrar deneyin."
     }
   },
   "portfolio": {

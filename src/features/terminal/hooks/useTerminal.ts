@@ -2,6 +2,13 @@ import { useState, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { TerminalLine } from "../types";
 
+const generateId = () => {
+  if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
+    return crypto.randomUUID();
+  }
+  return Math.random().toString(36).substring(2, 11) + Date.now().toString(36);
+};
+
 export function useTerminal() {
   const t = useTranslations("terminal");
   const [lines, setLines] = useState<TerminalLine[]>([]);
@@ -9,7 +16,7 @@ export function useTerminal() {
 
   const addLines = useCallback((texts: string[], type: "output" | "error" = "output") => {
     const newLines = texts.map((text) => ({
-      id: crypto.randomUUID(),
+      id: generateId(),
       text,
       type,
     }));
@@ -25,7 +32,7 @@ export function useTerminal() {
     const timer = setTimeout(() => {
       setLines((prev) => [
         ...prev,
-        { id: crypto.randomUUID(), text: "guest@tayfun-vps:~$ whoami", type: "command" },
+        { id: generateId(), text: `guest@tayfun-vps:~$ whoami`, type: "command" },
       ]);
       addLines(t.raw("whoami") as string[]);
       addLines([""]); // Empty line
@@ -41,7 +48,7 @@ export function useTerminal() {
 
     setLines((prev) => [
       ...prev,
-      { id: crypto.randomUUID(), text: `guest@tayfun-vps:~$ ${trimmedCommand}`, type: "command" },
+      { id: generateId(), text: `guest@tayfun-vps:~$ ${trimmedCommand}`, type: "command" },
     ]);
 
     const cleanCommand = trimmedCommand.toLowerCase();

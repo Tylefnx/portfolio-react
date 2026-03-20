@@ -39,7 +39,7 @@ export default function PortfolioSection() {
   };
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start flex flex-col items-center justify-center pt-28 pb-16 lg:pt-32 lg:pb-24 p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
+    <section className="min-h-[100dvh] w-full lg:snap-center flex flex-col items-center justify-center pt-[calc(var(--nav-h)+1rem)] pb-16 lg:pt-[calc(var(--nav-h)+1.25rem)] lg:pb-24 p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -68,7 +68,7 @@ export default function PortfolioSection() {
               key={proj.id}
               variants={itemVariants}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-colors duration-300 p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
+              className="group bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-colors duration-300 p-6 lg:p-8 rounded-3xl flex flex-col gap-6 relative overflow-hidden shadow-2xl"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-surface0/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

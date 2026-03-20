@@ -9,7 +9,7 @@ export default function HomeSection() {
   const { scrollToSection } = useScrollToSection();
 
   return (
-    <section className="h-[100dvh] w-full snap-start flex flex-col items-center justify-center pt-20 pb-12 lg:pt-24 lg:pb-16 p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
+    <section className="min-h-[100dvh] w-full lg:snap-center flex flex-col items-center justify-center pt-[calc(var(--nav-h)+1rem)] pb-16 lg:pt-[calc(var(--nav-h)+1.25rem)] lg:pb-24 p-6 lg:p-12 relative overflow-hidden bg-transparent z-0">
       <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-24 items-center">
         {/* Left Col - Hero */}
         <motion.div
@@ -17,22 +17,51 @@ export default function HomeSection() {
           whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
           viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex flex-col items-start z-10 pt-20 lg:pt-0"
+          className="flex flex-col items-start z-10"
         >
-          <div className="px-4 py-2 bg-surface0/40 backdrop-blur-md rounded-full border border-surface1 mb-6 inline-flex items-center gap-3 shadow-md">
-            <span className="w-2.5 h-2.5 rounded-full bg-green animate-pulse" />
-            <span className="text-xs text-subtext1 font-bold tracking-widest uppercase">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.5, y: -40, filter: "blur(10px)" }}
+            animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ 
+              duration: 1, 
+              delay: 0.1,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            className="px-4 py-2 bg-surface0/60 backdrop-blur-md rounded-full border border-surface1 mb-6 inline-flex items-center gap-3 shadow-xl"
+          >
+            <span className="w-2.5 h-2.5 rounded-full bg-green animate-pulse shadow-[0_0_8px_rgba(166,227,161,0.6)]" />
+            <span className="text-xs text-subtext1 font-black tracking-[0.2em] uppercase">
               {t("statusPill")}
             </span>
-          </div>
+          </motion.div>
 
-          <h1 className="text-4xl lg:text-5xl font-black leading-[1.2] tracking-tight">
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-blue to-text/90 font-black mb-2">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-black leading-[1.1] tracking-tighter">
+            <motion.span 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="block bg-clip-text text-transparent bg-gradient-to-r from-blue to-text/90 font-black mb-2"
+            >
               {t("heroTitle").split('\n')[0]}
-            </span>
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-blue to-green font-black drop-shadow-sm">
+            </motion.span>
+            <motion.span 
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ 
+                opacity: 1, 
+                scale: [0.85, 1.08, 1], // Pronounced initial pop
+              }}
+              transition={{ 
+                opacity: { duration: 0.6, delay: 0.5 },
+                scale: { 
+                  duration: 1, 
+                  ease: [0.16, 1, 0.3, 1], // Custom overshoot feel
+                  delay: 0.5
+                }
+              }}
+              className="block bg-clip-text text-transparent bg-gradient-to-r from-blue via-green to-teal font-black drop-shadow-xl"
+            >
               {t("heroTitle").split('\n')[1]}
-            </span>
+            </motion.span>
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-subtext0 leading-relaxed max-w-xl">
             {t("heroDescription")}
@@ -64,7 +93,7 @@ export default function HomeSection() {
           className="w-full z-10 relative group"
         >
           <Link href="/terminal" className="block outline-none">
-            <div className="bg-mantle/40 backdrop-blur-xl rounded-[2.5rem] border border-surface0 p-8 lg:p-10 relative overflow-hidden group hover:border-blue/50 transition-all duration-500 cursor-pointer shadow-2xl">
+            <div className="bg-mantle/40 backdrop-blur-xl rounded-[2.5rem] border border-surface0 p-8 lg:p-10 relative overflow-hidden group hover:border-blue/50 transition-all duration-500 cursor-pointer shadow-2xl gpu-accelerated">
               {/* Top ambient glow */}
               <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue/30 to-transparent opacity-50" />
               

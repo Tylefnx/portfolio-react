@@ -133,11 +133,14 @@ export default function ProjectsClient() {
         </Link>
       </motion.div>
 
-      <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-proximity bg-transparent custom-scrollbar relative">
+      <main
+        ref={containerRef}
+        className="h-[100dvh] w-full overflow-y-scroll snap-none lg:snap-y lg:snap-mandatory bg-transparent custom-scrollbar relative"
+      >
         {projects.map((proj, index) => (
           <section
             key={proj.id}
-            className="min-h-[100dvh] w-full snap-start snap-end flex flex-col items-center justify-center pt-28 pb-16 lg:pt-32 lg:pb-24 relative overflow-hidden bg-transparent border-b border-surface0 last:border-b-0 z-0"
+            className="min-h-[100dvh] w-full lg:snap-center flex flex-col items-center justify-center pt-28 pb-16 lg:pt-32 lg:pb-24 relative overflow-hidden bg-transparent border-b border-surface0 last:border-b-0 z-0"
           >
             <div className={`max-w-6xl w-full mx-auto z-10 ${proj.images && proj.images.length > 0
               ? "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center"

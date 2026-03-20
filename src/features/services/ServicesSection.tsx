@@ -36,7 +36,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="min-h-[100dvh] w-full snap-start snap-end flex flex-col items-center justify-center pt-28 pb-32 lg:pt-32 lg:pb-24 p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
+    <section className="min-h-[100dvh] w-full lg:snap-center flex flex-col items-center justify-center pt-[calc(var(--nav-h)+1rem)] pb-32 lg:pt-[calc(var(--nav-h)+1.25rem)] lg:pb-24 p-6 lg:p-12 bg-transparent relative overflow-hidden z-0">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -60,7 +60,7 @@ export default function ServicesSection() {
               key={svc.key}
               variants={itemVariants}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-colors duration-300 p-8 rounded-3xl flex flex-col gap-5 group shadow-xl"
+              className="bg-mantle/40 backdrop-blur-md border border-surface0 hover:border-surface2 transition-colors duration-300 p-6 lg:p-8 rounded-3xl flex flex-col gap-5 group shadow-xl"
             >
               <div className="w-16 h-16 rounded-xl bg-surface0/40 backdrop-blur-md border border-surface1 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
                 {svc.icon}

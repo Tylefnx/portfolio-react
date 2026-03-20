@@ -72,7 +72,10 @@
       "emailPlaceholder": "contact@tayfun.dev",
       "message": "Your Message",
       "messagePlaceholder": "Tell me about your project and infrastructure needs...",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "sent": "Message Sent!",
+      "error": "Something went wrong. Please try again."
     }
   },
   "portfolio": {

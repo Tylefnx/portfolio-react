@@ -15,7 +15,7 @@ export function useScrollToSection() {
 
     const sections = document.querySelectorAll('section');
     if (sections[index]) {
-      sections[index].scrollIntoView({ behavior: 'smooth' });
+      sections[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [pathname, router]);
 

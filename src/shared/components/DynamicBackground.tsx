@@ -56,12 +56,12 @@ export default function DynamicBackground({ scrollYProgress }: { scrollYProgress
   return (
     <motion.div 
       style={{ backgroundColor: bgColor }}
-      className="fixed inset-0 -z-10 pointer-events-none overflow-hidden transition-colors duration-1000"
+      className="fixed inset-0 -z-10 pointer-events-none overflow-hidden"
     >
       {/* Layer 1: Parallax Starfield (Scattered dots) */}
       <motion.div
         style={{ y: yStars }}
-        className="absolute inset-x-0 -top-[10%] h-[120%] opacity-[0.15] mix-blend-screen"
+        className="absolute inset-x-0 -top-[10%] h-[120%] opacity-[0.12] mix-blend-screen"
       >
         <div 
           className="absolute inset-0"
@@ -86,36 +86,36 @@ export default function DynamicBackground({ scrollYProgress }: { scrollYProgress
       >
         {/* Glow 1 (Top Left) */}
         <motion.div
-          animate={{ x: [0, 40, 0], y: [0, 60, 0], scale: [1, 1.2, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          style={{ backgroundColor: color1 }}
-          className="absolute top-[15%] -left-[15%] w-[70vw] h-[70vw] max-w-[1000px] max-h-[1000px] rounded-full blur-[140px] mix-blend-screen transition-colors duration-1000"
+          animate={{ x: [0, 40, 0], y: [0, 60, 0] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+          style={{ backgroundColor: color1, willChange: "transform" }}
+          className="absolute top-[15%] -left-[15%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] rounded-full blur-[90px] backdrop-filter opacity-80 mix-blend-screen"
         />
         
         {/* Glow 2 (Bottom Right) */}
         <motion.div
-          animate={{ x: [0, -60, 0], y: [0, -40, 0], scale: [1, 1.15, 1] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-          style={{ backgroundColor: color2 }}
-          className="absolute bottom-[10%] -right-[15%] w-[80vw] h-[80vw] max-w-[1100px] max-h-[1100px] rounded-full blur-[160px] mix-blend-screen transition-colors duration-1000"
+          animate={{ x: [0, -60, 0], y: [0, -40, 0] }}
+          transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+          style={{ backgroundColor: color2, willChange: "transform" }}
+          className="absolute bottom-[10%] -right-[15%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] rounded-full blur-[100px] backdrop-filter opacity-80 mix-blend-screen"
         />
 
         {/* Glow 3 (Center Moving) */}
         <motion.div
-          animate={{ x: [-30, 30, -30], y: [40, -40, 40], scale: [0.9, 1.1, 0.9] }}
-          transition={{ duration: 30, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          style={{ backgroundColor: color3 }}
-          className="absolute top-[40%] left-[20%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] rounded-full blur-[120px] mix-blend-screen transition-colors duration-1000"
+          animate={{ x: [-30, 30, -30], y: [40, -40, 40] }}
+          transition={{ duration: 35, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          style={{ backgroundColor: color3, willChange: "transform" }}
+          className="absolute top-[40%] left-[20%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full blur-[80px] backdrop-filter opacity-80 mix-blend-screen"
         />
       </motion.div>
       
       {/* Top Gradient Overlay for Depth (Vignette) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-crust/40 via-transparent to-crust/60 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-crust/30 via-transparent to-crust/50 pointer-events-none" />
 
-      {/* Static Film Grain overlay (Premium Texture) */}
+      {/* Static Film Grain overlay (Premium Texture) - Optimized numOctaves */}
       <div 
-        className="absolute inset-0 opacity-[0.06] mix-blend-overlay z-30 pointer-events-none"
-        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} 
+        className="absolute inset-0 opacity-[0.05] mix-blend-overlay z-30 pointer-events-none"
+        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} 
       />
     </motion.div>
   );

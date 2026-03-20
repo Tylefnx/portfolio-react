@@ -17,16 +17,28 @@ export default function HomeClient() {
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
+    let currentActive = -1;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = Array.from(sections).indexOf(entry.target as HTMLElement);
-            if (index !== -1) setActiveSection(index);
+        // Find the section that is most visible
+        const intersecting = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (intersecting.length > 0) {
+          const entry = intersecting[0];
+          const index = Array.from(sections).indexOf(entry.target as HTMLElement);
+          if (index !== -1 && index !== currentActive) {
+            currentActive = index;
+            setActiveSection(index);
           }
-        });
+        }
       },
-      { threshold: 0.5 }
+      { 
+        threshold: [0.2, 0.5, 0.8], // Multiple thresholds for smoother detection
+        rootMargin: "-10% 0px -10% 0px"
+      }
     );
 
     sections.forEach((s) => observer.observe(s));
@@ -36,7 +48,10 @@ export default function HomeClient() {
   return (
     <>
       <DynamicBackground scrollYProgress={scrollYProgress} />
-      <main ref={containerRef} className="h-[100dvh] w-full overflow-y-scroll snap-y snap-mandatory relative scroll-smooth bg-transparent">
+      <main
+        ref={containerRef}
+        className="h-[100dvh] w-full overflow-y-scroll snap-none lg:snap-y lg:snap-mandatory relative scroll-smooth bg-transparent"
+      >
         <HomeSection />
         <AboutSection />
         <PortfolioSection />

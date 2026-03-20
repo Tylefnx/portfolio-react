@@ -27,17 +27,17 @@ export default function TerminalView({ fullScreen = false }: { fullScreen?: bool
   return (
     <div
       className={clsx(
-        "w-full mx-auto bg-base rounded-xl shadow-2xl border border-surface0 overflow-hidden flex flex-col font-mono text-sm sm:text-base transition-all duration-500",
-        fullScreen ? "h-[80vh] lg:h-[85vh] max-w-full" : "h-[500px] max-w-4xl"
+        "w-full mx-auto bg-base rounded-2xl shadow-2xl border border-surface0 overflow-hidden flex flex-col font-mono text-[13px] sm:text-base transition-all duration-500",
+        fullScreen ? "h-[60dvh] lg:h-[70vh] max-w-5xl" : "h-[450px] max-w-4xl"
       )}
       onClick={() => inputRef.current?.focus()}
     >
       {/* Mac/Linux styled Top Bar */}
-      <div className="h-10 bg-mantle flex items-center px-4 border-b border-surface0 gap-2 shrink-0">
-        <div className="w-3 h-3 rounded-full bg-red" />
-        <div className="w-3 h-3 rounded-full bg-yellow" />
-        <div className="w-3 h-3 rounded-full bg-green" />
-        <span className="ml-auto text-subtext0 text-xs text-center absolute left-0 right-0 pointer-events-none">
+      <div className="h-8 sm:h-10 bg-mantle flex items-center px-3 sm:px-4 border-b border-surface0 gap-1.5 sm:gap-2 shrink-0 relative">
+        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red" />
+        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow" />
+        <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green" />
+        <span className="invisible sm:visible ml-auto text-subtext0 text-xs text-center absolute left-0 right-0 pointer-events-none">
           guest@tayfun-vps ~
         </span>
       </div>
