@@ -140,11 +140,11 @@ export default function ProjectsClient() {
         {projects.map((proj, index) => (
           <section
             key={proj.id}
-            className="min-h-[100dvh] w-full lg:snap-center flex flex-col items-center justify-center pt-28 pb-16 lg:pt-32 lg:pb-24 relative overflow-hidden bg-transparent border-b border-surface0 last:border-b-0 z-0"
+            className="min-h-[100dvh] w-full lg:snap-center flex flex-col items-center justify-center pt-32 pb-20 lg:pt-32 lg:pb-24 relative overflow-hidden bg-transparent border-b border-surface0 last:border-b-0 z-0"
           >
             <div className={`max-w-6xl w-full mx-auto z-10 ${proj.images && proj.images.length > 0
-              ? "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center"
-              : "flex flex-col items-center"
+              ? "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center px-6 lg:px-8"
+              : "flex flex-col items-center px-6 lg:px-8"
               }`}>
               {/* Project Info */}
               <motion.div
